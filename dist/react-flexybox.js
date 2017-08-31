@@ -2682,17 +2682,17 @@ var ColStyle = _styledComponents2.default.div(_templateObject, function (props) 
 }, function (props) {
   return props.order;
 }, function (props) {
-  return props.flex && _media.media.flex(_templateObject2, 'calc(' + props.flex / 12 * 100 + '% - ' + props.gutter * 2 + 'px)');
+  return props.flex && _media.media.flex(_templateObject2, 'calc(' + props.flex / props.columnDivisions * 100 + '% - ' + props.gutter * 2 + 'px)');
 }, function (props) {
   return !Number.isInteger(props.flex) && props.flex && 'flex: 1';
 }, function (props) {
-  return props.xs && _media.media.xs(_templateObject2, 'calc(' + props.xs / 12 * 100 + '% - ' + props.gutter * 2 + 'px)');
+  return props.xs && _media.media.xs(_templateObject2, 'calc(' + props.xs / props.columnDivisions * 100 + '% - ' + props.gutter * 2 + 'px)');
 }, function (props) {
-  return props.sm && _media.media.sm(_templateObject2, 'calc(' + props.sm / 12 * 100 + '% - ' + props.gutter * 2 + 'px)');
+  return props.sm && _media.media.sm(_templateObject2, 'calc(' + props.sm / props.columnDivisions * 100 + '% - ' + props.gutter * 2 + 'px)');
 }, function (props) {
-  return props.md && _media.media.md(_templateObject2, 'calc(' + props.md / 12 * 100 + '% - ' + props.gutter * 2 + 'px)');
+  return props.md && _media.media.md(_templateObject2, 'calc(' + props.md / props.columnDivisions * 100 + '% - ' + props.gutter * 2 + 'px)');
 }, function (props) {
-  return props.lg && _media.media.lg(_templateObject2, 'calc(' + props.lg / 12 * 100 + '% - ' + props.gutter * 2 + 'px)');
+  return props.lg && _media.media.lg(_templateObject2, 'calc(' + props.lg / props.columnDivisions * 100 + '% - ' + props.gutter * 2 + 'px)');
 });
 
 var Col = function Col(props) {
@@ -2705,6 +2705,7 @@ var Col = function Col(props) {
       md: props.md,
       lg: props.lg,
       gutter: props.gutter,
+      columnDivisions: props.columnDivisions,
       order: props.order
     },
     props.children
@@ -2714,6 +2715,7 @@ var Col = function Col(props) {
 Col.propTypes = {
   children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]).isRequired,
   gutter: _propTypes2.default.number.isRequired,
+  columnDivisions: _propTypes2.default.number.isRequired,
   order: _propTypes2.default.number,
   flex: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
   xs: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
@@ -5211,13 +5213,15 @@ var RowStyle = _styledComponents2.default.div(_templateObject, function (props) 
 var Row = function Row(props) {
   var renderChildren = function renderChildren() {
     var gutter = props.gutter,
+        columnDivisions = props.columnDivisions,
         children = props.children;
 
 
     return _react2.default.Children.map(children, function (child) {
       if (child.type === _Col2.default) {
         return _react2.default.cloneElement(child, {
-          gutter: gutter
+          gutter: gutter,
+          columnDivisions: columnDivisions
         });
       }
 
@@ -5240,6 +5244,7 @@ var Row = function Row(props) {
 
 Row.propTypes = {
   gutter: _propTypes2.default.number,
+  columnDivisions: _propTypes2.default.number,
   wrap: _propTypes2.default.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   direction: _propTypes2.default.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
   justifyContent: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
@@ -5249,6 +5254,7 @@ Row.propTypes = {
 
 Row.defaultProps = {
   gutter: 0,
+  columnDivisions: 12,
   wrap: 'wrap',
   direction: 'row',
   justifyContent: 'flex-start',

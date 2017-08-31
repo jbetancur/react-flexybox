@@ -16,12 +16,13 @@ const RowStyle = styled.div`
 
 const Row = (props) => {
   const renderChildren = () => {
-    const { gutter, children } = props;
+    const { gutter, columnDivisions, children } = props;
 
     return React.Children.map(children, (child) => {
       if (child.type === Col) {
         return React.cloneElement(child, {
           gutter,
+          columnDivisions,
         });
       }
 
@@ -44,6 +45,7 @@ const Row = (props) => {
 
 Row.propTypes = {
   gutter: PropTypes.number,
+  columnDivisions: PropTypes.number,
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   direction: PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
   justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
@@ -53,6 +55,7 @@ Row.propTypes = {
 
 Row.defaultProps = {
   gutter: 0,
+  columnDivisions: 12,
   wrap: 'wrap',
   direction: 'row',
   justifyContent: 'flex-start',

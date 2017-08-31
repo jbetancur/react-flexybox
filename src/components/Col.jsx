@@ -10,7 +10,7 @@ const ColStyle = styled.div`
   order: ${props => props.order};
 
   ${props => props.flex && media.flex`
-    --width: ${`calc(${(props.flex / 12) * 100}% - ${props.gutter * 2}px)`};
+    --width: ${`calc(${(props.flex / props.columnDivisions) * 100}% - ${props.gutter * 2}px)`};
     flex: 0 1 var(--width);
     min-width: var(--width);
   `}
@@ -19,25 +19,25 @@ const ColStyle = styled.div`
   ${props => !Number.isInteger(props.flex) && props.flex && 'flex: 1'};
 
   ${props => props.xs && media.xs`
-    --width: ${`calc(${(props.xs / 12) * 100}% - ${props.gutter * 2}px)`};
+    --width: ${`calc(${(props.xs / props.columnDivisions) * 100}% - ${props.gutter * 2}px)`};
     flex: 0 1 var(--width);
     min-width: var(--width);
   `}
 
   ${props => props.sm && media.sm`
-    --width: ${`calc(${(props.sm / 12) * 100}% - ${props.gutter * 2}px)`};
+    --width: ${`calc(${(props.sm / props.columnDivisions) * 100}% - ${props.gutter * 2}px)`};
     flex: 0 1 var(--width);
     min-width: var(--width);
   `}
 
   ${props => props.md && media.md`
-    --width: ${`calc(${(props.md / 12) * 100}% - ${props.gutter * 2}px)`};
+    --width: ${`calc(${(props.md / props.columnDivisions) * 100}% - ${props.gutter * 2}px)`};
     flex: 0 1 var(--width);
     min-width: var(--width);
   `}
 
   ${props => props.lg && media.lg`
-    --width: ${`calc(${(props.lg / 12) * 100}% - ${props.gutter * 2}px)`};
+    --width: ${`calc(${(props.lg / props.columnDivisions) * 100}% - ${props.gutter * 2}px)`};
     flex: 0 1 var(--width);
     min-width: var(--width);
   `}
@@ -51,6 +51,7 @@ const Col = props => (
     md={props.md}
     lg={props.lg}
     gutter={props.gutter}
+    columnDivisions={props.columnDivisions}
     order={props.order}
   >
     {props.children}
@@ -64,6 +65,7 @@ Col.propTypes = {
     PropTypes.node
   ]).isRequired,
   gutter: PropTypes.number.isRequired,
+  columnDivisions: PropTypes.number.isRequired,
   order: PropTypes.number,
   flex: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   xs: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
