@@ -51,3 +51,5 @@ export const fluid = {
     }
     `
 };
+
+export const genWidth = (prop, divisions, gutter) => `calc(${(prop / divisions) * 100}% - ${gutter * 2}px)`;

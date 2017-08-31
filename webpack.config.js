@@ -46,11 +46,17 @@ const config = {
       commonjs: 'react',
       amd: 'react',
     },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom',
+    // 'react-dom': {
+    //   root: 'ReactDOM',
+    //   commonjs2: 'react-dom',
+    //   commonjs: 'react-dom',
+    //   amd: 'react-dom',
+    // },
+    'styled-components': {
+      root: 'styled',
+      commonjs2: 'styled-components',
+      commonjs: 'styled-components',
+      amd: 'styled-components',
     },
   },
   output: {
@@ -71,7 +77,7 @@ const config = {
         test: /(\.jsx|\.js)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
-      }
+      },
     ]
   },
   resolve: {

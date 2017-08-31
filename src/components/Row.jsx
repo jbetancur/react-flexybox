@@ -7,6 +7,7 @@ const RowStyle = styled.div`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
+  width: 100%;
   flex-direction: ${props => props.direction};
   flex-wrap: ${props => props.wrap};
   justify-content: ${props => props.justifyContent};
@@ -16,13 +17,14 @@ const RowStyle = styled.div`
 
 const Row = (props) => {
   const renderChildren = () => {
-    const { gutter, columnDivisions, children } = props;
+    const { gutter, columnDivisions, minColWidths, children } = props;
 
     return React.Children.map(children, (child) => {
       if (child.type === Col) {
         return React.cloneElement(child, {
           gutter,
           columnDivisions,
+          minWidth: minColWidths,
         });
       }
 
@@ -37,6 +39,9 @@ const Row = (props) => {
       justifyContent={props.justifyContent}
       alignContent={props.alignContent}
       alignItems={props.alignItems}
+      minColWidths={props.minColWidths}
+      className={props.className}
+      style={props.style}
     >
       {renderChildren(props)}
     </RowStyle>
@@ -46,6 +51,9 @@ const Row = (props) => {
 Row.propTypes = {
   gutter: PropTypes.number,
   columnDivisions: PropTypes.number,
+  minColWidths: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  className: PropTypes.string,
+  style: PropTypes.object,
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
   direction: PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
   justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
@@ -56,6 +64,9 @@ Row.propTypes = {
 Row.defaultProps = {
   gutter: 0,
   columnDivisions: 12,
+  minColWidths: false,
+  className: '',
+  style: {},
   wrap: 'wrap',
   direction: 'row',
   justifyContent: 'flex-start',

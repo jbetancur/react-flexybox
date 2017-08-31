@@ -1,14 +1,15 @@
 # React Flexy Box
 
-React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox
+React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox. If you've used the bootstrao layout sytem them react-flexybox should already be familiar.
 
 * Straight forward and familiar API for controlling your layout
-* lightweight when minimized @58kb (including styled-components dependancy)
+* lightweight when minimized ~19kb
 * built with styled-components - no need to add loaders for css/scss
+* easily override flex item widths using minWidthCols or minWidth
 
 ## Installation
 
-dependencies: react 15+
+dependencies: react 15+, styled-compoonents 2+
 
 ```
 npm install react-flexybox
@@ -23,49 +24,61 @@ yarn add react-flexy-box
 https://codepen.io/johnnyazee/pen/prqREK/
 
 ## API
-### `<Grid />`
+### `<Container />`
 Optional wrapper
 
-| prop  	|   type  	| values 	| default 	| description                 	                                                    |
-|-------	|:-------:	|--------	|---------	| --------------------------------------------------------------------------------- |
-| fluid 	| boolean 	|        	| true    	| true: sets content to 100% of page width \| false: sets a max-width for content   |
+| prop  	  |   type  	| values 	| default 	| description                 	                                                    |
+|---------- |:-------:	|--------	|---------	| --------------------------------------------------------------------------------- |
+| fluid 	  | boolean 	|        	| false    	| true: sets content to 100% of page width \| false: sets a max-width for content   |
+| className | string 	  |        	|         	| set the className on the Container Element                                        |
+| style 	  | object 	  |        	|         	| set the style on the Container Element                                            |
 
 ### `<Row>`
 Row wraps Cols
 
-| prop           	|   type  	| values                                                                         	    | default    	|
-|----------------	|:-------:	|------------------------------------------------------------------------------------	|------------	|
-| gutter         	| integer 	|                                                                                	    | 0          	|
-| columnDivision  | integer 	|  allows columns divisions to be overidden (i.e. 24 = smaller columns than 12)       | 12          |
+| prop           	|   type  	| values                                                                         	    | default    	| description |
+|----------------	|:-------:	|------------------------------------------------------------------------------------	|------------	| ----------- |
+| gutter         	| number 	  |                                                                                	    | 0          	|
+| columnDivision  | integer   |                                                                                     | 12          | allows columns divisions to be overidden (i.e. 24 = smaller columns than 12)
+| minColWidths    | number 	|                                                                                     |             | override the minWidth for all Cols within the Row
 | wrap           	| string  	| `nowrap \| wrap \| wrap-reverse`                                                	  | wrap       	|
 | direction      	| string  	| `row \| row-reverse \| column \| column-reverse`                                  	| row        	|
 | justifyContent 	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| space-evenly` | flex-start 	|
 | alignContent   	| string  	| `flex-start \| flex-end \| center \| baseline \| stretch`                          	| stretch    	|
 | alignItems     	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| stretch`      | stretch    	|
+| className       | string 	  |        	                                                                            |         	| set the className on the Row Element                                        |
+| style 	        | object 	  |        	                                                                             |         	| set the style on the Row Element                                            |
+
+* `<Row gutter={4} minColWidth={100}>` sets child `Col` flex items to margin of 4px and all min-widths to 100px within `Row`
+* `<Row justifyContext="center">` center justifies child `Col` flex items horizontally within the `Row `
 
 ### `<Col>`
 Flex Items
 
-| prop  	|        type        	| values 	| default 	| description                 	    |
-|-------	|:------------------:	|--------	|---------	|---------------------------------- |
-| order 	| integer            	|        	| 0       	| set the order of flex items in px	|
-| flex  	| integer or boolean 	| `1-12` 	| false   	| sets the default flex size  	    |
-| xs    	| integer            	| `1-12` 	|         	| 0 - 599px                         |
-| sm    	| integer            	| `1-12` 	|         	| 600 - 959px                       |
-| md    	| integer            	| `1-12` 	|         	| 960px - 1280px              	    |
-| lg    	| integer            	| `1-12` 	|         	| 1280px or greater           	    |
+| prop  	  |        type        	| values 	| default 	            | description                 	              |
+|---------- |:------------------:	|--------	|----------------------	|-------------------------------------------- |
+| order 	  | integer            	|        	| 0       	            | set the order of flex items     	          |
+| minWidth  | number            	|        	|        	              | override the minWidth      	                |
+| flex  	  | boolean \| number   |  	      | `false \| 1-12`   	  | sets the default flex size  	              |
+| xs    	  | number            	|        	| `1-12`                | 0 - 599px                                   |
+| sm    	  | number            	|        	| `1-12`   	            | 600 - 959px                                 |
+| md    	  | number            	|        	| `1-12`                | 960px - 1280px              	              |
+| lg    	  | number            	|        	| `1-12`                | 1280px or greater           	              |
+| className | string 	            |        	|         	            | set the className on the Col Element        |
+| style 	  | object 	            |         |         	            | set the style on the Col Element            |
 
 * `<Col flex={6}>` sets the default flex size
 * `<Col flex>` sets the item to auto stretch
 * `<Col flex={6} xs={12}>` xs (xs, sm, md, or lg) used togther with flex - you can easily set a default flex size for any size other than the xs breakpoint 
+* `<Col flex={6} order={2}> ... <Col flex={6} order={1}>` The last Col will be ordered as first
 * values for flex ranges are dependent on columnDivisions
 
 ## Basic Usage
 ```
-import { Grid, Row, Col } from 'react-flexybox';
+import { Container, Row, Col } from 'react-flexybox';
 
 // sets Cols to both 50% of the page
-<Grid>
+<Container>
   <Row>
     <Col flex={6}>
       hello1!
@@ -74,10 +87,10 @@ import { Grid, Row, Col } from 'react-flexybox';
       hello2!
     </Col>
   </Row>
-</Grid>
+</Container>
 
 // sets Cols to both 50% of the page except on xs where they should be 100%
-<Grid>
+<Container>
   <Row>
     <Col flex={6} xs={12}>
       hello1!
@@ -86,10 +99,10 @@ import { Grid, Row, Col } from 'react-flexybox';
       hello2!
     </Col>
   </Row>
-</Grid>
+</Container>
 
 // adds a gutter to all flex items
-<Grid>
+<Container>
   <Row gutter={3}>
     <Col flex={6} xs={12}>
       hello1!
@@ -98,7 +111,7 @@ import { Grid, Row, Col } from 'react-flexybox';
       hello2!
     </Col>
   </Row>
-</Grid>
+</Container>
 ```
 
 ## CDN Hosted
@@ -108,7 +121,7 @@ import { Grid, Row, Col } from 'react-flexybox';
 ### Usage (UMD)
 ```
 const {
-  Grid,
+  Container,
   Row,
   Col,
 } = ReactFlexyBox;
@@ -118,14 +131,13 @@ const {
 * offsets
 
 ## Supported Browsers (CSS)
-Flexy Box CSS is prefixed and tested for the following browsers. If are loading the scss directly (webpack, gulp, etc) then you will need to ensure that you create a task
-to auto prefix.
+Flexy Box CSS is tested on the following browsers, but it will be up to you to set your autoprefixing.
 
 * Chrome *
 * Firefox *
 * Safari (flex wrap does not currently work in safari due to webkit bug)*
 * Edge *
-* IE 10 & 11 -- (maybe)
+* IE 11
 * iOS *
 
 # Contributing

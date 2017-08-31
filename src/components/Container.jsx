@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { fluid } from '../utils/media';
 
-const GridStyle = styled.div`
+const ContainerStyle = styled.div`
   margin-right: auto;
   margin-left: auto;
   ${props => props.fluid && 'width: 100%;'};
@@ -30,22 +30,30 @@ const GridStyle = styled.div`
 };
 `;
 
-const Grid = props => (
-  <GridStyle fluid={props.fluid}>
+const Container = props => (
+  <ContainerStyle
+    fluid={props.fluid}
+    className={props.className}
+    style={props.style}
+  >
     {props.children}
-  </GridStyle>
+  </ContainerStyle>
 );
 
-Grid.propTypes = {
+Container.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
   fluid: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
 };
 
-Grid.defaultProps = {
-  fluid: true,
+Container.defaultProps = {
+  fluid: false,
+  className: '',
+  style: {},
 };
 
-export default Grid;
+export default Container;
