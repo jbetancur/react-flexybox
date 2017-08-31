@@ -2,9 +2,22 @@
 
 React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox
 
-* Straightforward and familiar API for controllling your layout
-* lightweight when minimized = ~58KB
+* Straight forward and familiar API for controlling your layout
+* lightweight when minimized @58kb (including styled-components dependancy)
 * built with styled-components - no need to add loaders for css/scss
+
+## Installation
+
+dependencies: react 15+
+
+```
+npm install react-flexybox
+```
+or
+
+```
+yarn add react-flexy-box
+```
 
 ## Live Demo
 https://codepen.io/johnnyazee/pen/prqREK/
@@ -13,9 +26,9 @@ https://codepen.io/johnnyazee/pen/prqREK/
 ### `<Grid />`
 Optional wrapper
 
-| prop  	|   type  	| values 	| default 	|
-|-------	|:-------:	|--------	|---------	|
-| fluid 	| boolean 	|        	| true    	|
+| prop  	|   type  	| values 	| default 	| description                 	                                                    |
+|-------	|:-------:	|--------	|---------	| --------------------------------------------------------------------------------- |
+| fluid 	| boolean 	|        	| true    	| true: sets content to 100% of page width \| false: sets a max-width for content   |
 
 ### `<Row>`
 Row wraps Cols
@@ -23,6 +36,7 @@ Row wraps Cols
 | prop           	|   type  	| values                                                                         	    | default    	|
 |----------------	|:-------:	|------------------------------------------------------------------------------------	|------------	|
 | gutter         	| integer 	|                                                                                	    | 0          	|
+| columnDivision  | integer 	|  allows columns divisions to be overidden (i.e. 24 = smaller columns than 12)       | 12          |
 | wrap           	| string  	| `nowrap \| wrap \| wrap-reverse`                                                	  | wrap       	|
 | direction      	| string  	| `row \| row-reverse \| column \| column-reverse`                                  	| row        	|
 | justifyContent 	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| space-evenly` | flex-start 	|
@@ -32,20 +46,21 @@ Row wraps Cols
 ### `<Col>`
 Flex Items
 
-| prop  	|        type        	| values 	| default 	| description                 	|
-|-------	|:------------------:	|--------	|---------	|-----------------------------	|
-| order 	| integer            	|        	| 0       	| set the order of flex items 	|
-| flex  	| integer or boolean 	| `1-12` 	| false   	| sets the default flex size  	|
-| xs    	| integer            	| `1-12` 	|         	| 0 - 599px                     |
-| sm    	| integer            	| `1-12` 	|         	| 600 - 959px                   |
-| md    	| integer            	| `1-12` 	|         	| 960px - 1280px              	|
-| lg    	| integer            	| `1-12` 	|         	| 1280px or greater           	|
+| prop  	|        type        	| values 	| default 	| description                 	    |
+|-------	|:------------------:	|--------	|---------	|---------------------------------- |
+| order 	| integer            	|        	| 0       	| set the order of flex items in px	|
+| flex  	| integer or boolean 	| `1-12` 	| false   	| sets the default flex size  	    |
+| xs    	| integer            	| `1-12` 	|         	| 0 - 599px                         |
+| sm    	| integer            	| `1-12` 	|         	| 600 - 959px                       |
+| md    	| integer            	| `1-12` 	|         	| 960px - 1280px              	    |
+| lg    	| integer            	| `1-12` 	|         	| 1280px or greater           	    |
 
 * `<Col flex={6}>` sets the default flex size
 * `<Col flex>` sets the item to auto stretch
 * `<Col flex={6} xs={12}>` xs (xs, sm, md, or lg) used togther with flex - you can easily set a default flex size for any size other than the xs breakpoint 
+* values for flex ranges are dependent on columnDivisions
 
-## Usage
+## Basic Usage
 ```
 import { Grid, Row, Col } from 'react-flexybox';
 
@@ -72,9 +87,21 @@ import { Grid, Row, Col } from 'react-flexybox';
     </Col>
   </Row>
 </Grid>
+
+// adds a gutter to all flex items
+<Grid>
+  <Row gutter={3}>
+    <Col flex={6} xs={12}>
+      hello1!
+    </Col>
+    <Col flex={6} xs={12}>
+      hello2!
+    </Col>
+  </Row>
+</Grid>
 ```
 
-## CDN Hosting
+## CDN Hosted
 * https://react-flexybox.netlify.com/react-flexybox.js
 * https://react-flexybox.netlify.com/react-flexybox.min.js
 
