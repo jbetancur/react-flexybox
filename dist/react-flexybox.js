@@ -587,7 +587,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
 
 var _react = __webpack_require__(2);
@@ -612,6 +612,8 @@ var ColStyle = _styledComponents2.default.div(_templateObject, function (props) 
   return props.gutter;
 }, function (props) {
   return props.order;
+}, function (props) {
+  return props.debug && 'border: 1px solid green';
 }, function (props) {
   return props.flex && _media.media.flex(_templateObject2, (0, _media.genWidth)(props.flex, props.columnDivisions, props.gutter));
 }, function (props) {
@@ -642,24 +644,77 @@ var Col = function Col(props) {
       order: props.order,
       minWidth: props.minWidth,
       className: props.className,
-      style: props.style
+      style: props.style,
+      debug: props.debug
     },
     props.children
   );
 };
 
 Col.propTypes = {
+  /**
+   * react/html elements
+   */
   children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]).isRequired,
+
+  /**
+   * inherited from `Row`
+   */
   gutter: _propTypes2.default.number.isRequired,
+
+  /**
+   * inherited from `Row`
+   */
   columnDivisions: _propTypes2.default.number.isRequired,
+
+  /**
+   * inherited from `Row`
+   */
+  debug: _propTypes2.default.bool.isRequired,
+
+  /**
+   * allows overriding the `Col` item order
+   */
   order: _propTypes2.default.number,
+
+  /**
+   * sets the min-width on a `Col` item - this overrides `Row` `minColWidths` for a specific `Col`
+   */
   minWidth: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * overide the `className` on the root element of Row
+   */
   className: _propTypes2.default.string,
+
+  /**
+   * override the `style` on the root element of Row
+   */
   style: _propTypes2.default.object,
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item
+   */
   flex: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 0-599-px
+   */
   xs: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 600-959px
+   */
   sm: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 960-1280px
+   */
   md: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 1280px or greater
+   */
   lg: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
 };
 
@@ -771,7 +826,14 @@ var Container = function Container(props) {
 };
 
 Container.propTypes = {
+  /**
+   * react/html elements
+   */
   children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]).isRequired,
+
+  /**
+   * full width or controlled width layout
+   */
   fluid: _propTypes2.default.bool,
   className: _propTypes2.default.string,
   style: _propTypes2.default.object
@@ -1452,7 +1514,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n']);
 
 var _react = __webpack_require__(2);
 
@@ -1484,12 +1546,15 @@ var RowStyle = _styledComponents2.default.div(_templateObject, function (props) 
   return props.alignContent;
 }, function (props) {
   return props.alignItems;
+}, function (props) {
+  return props.debug && 'border: 1px solid red';
 });
 
 var Row = function Row(props) {
   var renderChildren = function renderChildren() {
     var gutter = props.gutter,
         columnDivisions = props.columnDivisions,
+        debug = props.debug,
         minColWidths = props.minColWidths,
         children = props.children;
 
@@ -1499,6 +1564,7 @@ var Row = function Row(props) {
         return _react2.default.cloneElement(child, {
           gutter: gutter,
           columnDivisions: columnDivisions,
+          debug: debug,
           minWidth: minColWidths
         });
       }
@@ -1517,23 +1583,70 @@ var Row = function Row(props) {
       alignItems: props.alignItems,
       minColWidths: props.minColWidths,
       className: props.className,
-      style: props.style
+      style: props.style,
+      debug: props.debug
     },
     renderChildren(props)
   );
 };
 
 Row.propTypes = {
+  /**
+   * sets the margins for flex items
+   */
   gutter: _propTypes2.default.number,
+
+  /**
+   * controls the size of each flex division. 1/12 divisions yeilds ~8% section of screen size.
+   * 1/24 would yield ~4%
+   */
   columnDivisions: _propTypes2.default.number,
+
+  /**
+   * sets the min-width for all `Col` flex items. This also forces wrapping when the screen size is adjusted
+   * and the flex item reaches its min-width
+   */
   minColWidths: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * overide the `className` on the root element of Row
+   */
   className: _propTypes2.default.string,
+
+  /**
+   * override the `style` on the root element of Row
+   */
   style: _propTypes2.default.object,
+
+  /**
+   * set the wrapping type
+   */
   wrap: _propTypes2.default.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+
+  /**
+   * set the `Row` direction
+   */
   direction: _propTypes2.default.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+
+  /**
+   * jusify `Col` items on the min x axis (hotizontally)
+   */
   justifyContent: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
+
+  /**
+   * aligns the whole structure according to its value and has no effect when items are in a single line
+   */
   alignContent: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-  alignItems: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'])
+
+  /**
+   * aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
+   */
+  alignItems: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
+
+  /**
+   * enables bounding boxes for `Row` and `Col` to help debug layout issues
+   */
+  debug: _propTypes2.default.bool
 };
 
 Row.defaultProps = {
@@ -1546,7 +1659,8 @@ Row.defaultProps = {
   direction: 'row',
   justifyContent: 'flex-start',
   alignContent: 'stretch',
-  alignItems: 'stretch'
+  alignItems: 'stretch',
+  debug: false
 };
 
 exports.default = Row;
