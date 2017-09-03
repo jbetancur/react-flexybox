@@ -48,6 +48,7 @@ Row wraps Cols
 | alignItems     	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| stretch`      | stretch    	| alignItems aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
 | className       | string 	  |        	                                                                            |         	| set the className on the Row Element                                        |
 | style 	        | object 	  |        	                                                                             |         	| set the style on the Row Element                                            |
+| debug           | boolean   |                                                                                     | false     | adds bounding boxes to help debug layout issues |
 
 * `<Row gutter={4} minColWidth={100}>` sets child `Col` flex items to margin of 4px and all min-widths to 100px within `Row`
 * `<Row justifyContext="center">` center justifies child `Col` flex items horizontally within the `Row`
