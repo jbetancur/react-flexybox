@@ -41,10 +41,17 @@ const Container = props => (
 );
 
 Container.propTypes = {
+  /**
+   * react/html elements
+   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
+
+  /**
+   * full width or controlled width layout
+   */
   fluid: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,

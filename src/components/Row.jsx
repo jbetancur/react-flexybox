@@ -13,17 +13,19 @@ const RowStyle = styled.div`
   justify-content: ${props => props.justifyContent};
   align-content: ${props => props.alignContent};
   align-items: ${props => props.alignItems};
+  ${props => props.debug && 'border: 1px solid red'};
 `;
 
 const Row = (props) => {
   const renderChildren = () => {
-    const { gutter, columnDivisions, minColWidths, children } = props;
+    const { gutter, columnDivisions, debug, minColWidths, children } = props;
 
     return React.Children.map(children, (child) => {
       if (child.type === Col) {
         return React.cloneElement(child, {
           gutter,
           columnDivisions,
+          debug,
           minWidth: minColWidths,
         });
       }
@@ -42,6 +44,7 @@ const Row = (props) => {
       minColWidths={props.minColWidths}
       className={props.className}
       style={props.style}
+      debug={props.debug}
     >
       {renderChildren(props)}
     </RowStyle>
@@ -49,16 +52,62 @@ const Row = (props) => {
 };
 
 Row.propTypes = {
+  /**
+   * sets the margins for flex items
+   */
   gutter: PropTypes.number,
+
+  /**
+   * controls the size of each flex division. 1/12 divisions yeilds ~8% section of screen size.
+   * 1/24 would yield ~4%
+   */
   columnDivisions: PropTypes.number,
+
+  /**
+   * sets the min-width for all `Col` flex items. This also forces wrapping when the screen size is adjusted
+   * and the flex item reaches its min-width
+   */
   minColWidths: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+
+  /**
+   * overide the `className` on the root element of Row
+   */
   className: PropTypes.string,
+
+  /**
+   * override the `style` on the root element of Row
+   */
   style: PropTypes.object,
+
+  /**
+   * set the wrapping type
+   */
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+
+  /**
+   * set the `Row` direction
+   */
   direction: PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+
+  /**
+   * jusify `Col` items on the min x axis (hotizontally)
+   */
   justifyContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
+
+  /**
+   * aligns the whole structure according to its value and has no effect when items are in a single line
+   */
   alignContent: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+
+  /**
+   * aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
+   */
   alignItems: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
+
+  /**
+   * enables bounding boxes for `Row` and `Col` to help debug layout issues
+   */
+  debug: PropTypes.bool,
 };
 
 Row.defaultProps = {
@@ -72,6 +121,7 @@ Row.defaultProps = {
   justifyContent: 'flex-start',
   alignContent: 'stretch',
   alignItems: 'stretch',
+  debug: false,
 };
 
 export default Row;
