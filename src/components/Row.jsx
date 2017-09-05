@@ -22,7 +22,7 @@ const Row = (props) => {
     const { gutter, columnDivisions, debug, minColWidths, children } = props;
 
     return React.Children.map(children, (child) => {
-      if (child.type === Col) {
+      if (child.type && child.type === Col) {
         return React.cloneElement(child, {
           gutter,
           columnDivisions,
