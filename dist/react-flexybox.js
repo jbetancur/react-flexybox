@@ -1562,7 +1562,7 @@ var Row = function Row(props) {
 
 
     return _react2.default.Children.map(children, function (child) {
-      if (child.type === _Col2.default) {
+      if (child.type && child.type === _Col2.default) {
         return _react2.default.cloneElement(child, {
           gutter: gutter,
           columnDivisions: columnDivisions,
