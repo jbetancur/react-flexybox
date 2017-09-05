@@ -1514,7 +1514,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n']);
 
 var _react = __webpack_require__(2);
 
@@ -1548,6 +1548,8 @@ var RowStyle = _styledComponents2.default.div(_templateObject, function (props) 
   return props.alignItems;
 }, function (props) {
   return props.debug && 'border: 1px solid red';
+}, function (props) {
+  return props.height && 'height: ' + props.height;
 });
 
 var Row = function Row(props) {
@@ -1584,7 +1586,8 @@ var Row = function Row(props) {
       minColWidths: props.minColWidths,
       className: props.className,
       style: props.style,
-      debug: props.debug
+      debug: props.debug,
+      height: props.height
     },
     renderChildren(props)
   );
@@ -1646,7 +1649,12 @@ Row.propTypes = {
   /**
    * enables bounding boxes for `Row` and `Col` to help debug layout issues
    */
-  debug: _propTypes2.default.bool
+  debug: _propTypes2.default.bool,
+
+  /**
+   * set the height of the `Row`
+   */
+  height: _propTypes2.default.string
 };
 
 Row.defaultProps = {
@@ -1660,7 +1668,8 @@ Row.defaultProps = {
   justifyContent: 'flex-start',
   alignContent: 'stretch',
   alignItems: 'stretch',
-  debug: false
+  debug: false,
+  height: 'auto'
 };
 
 exports.default = Row;

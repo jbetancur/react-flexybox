@@ -14,6 +14,7 @@ const RowStyle = styled.div`
   align-content: ${props => props.alignContent};
   align-items: ${props => props.alignItems};
   ${props => props.debug && 'border: 1px solid red'};
+  ${props => props.height && `height: ${props.height}`};
 `;
 
 const Row = (props) => {
@@ -45,6 +46,7 @@ const Row = (props) => {
       className={props.className}
       style={props.style}
       debug={props.debug}
+      height={props.height}
     >
       {renderChildren(props)}
     </RowStyle>
@@ -108,6 +110,11 @@ Row.propTypes = {
    * enables bounding boxes for `Row` and `Col` to help debug layout issues
    */
   debug: PropTypes.bool,
+
+  /**
+   * set the height of the `Row`
+   */
+  height: PropTypes.string,
 };
 
 Row.defaultProps = {
@@ -122,6 +129,7 @@ Row.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'stretch',
   debug: false,
+  height: 'auto',
 };
 
 export default Row;
