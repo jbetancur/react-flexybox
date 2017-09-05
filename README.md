@@ -41,17 +41,23 @@ Row wraps Cols
 |----------------	|:-------:	|------------------------------------------------------------------------------------	|------------	| ----------- |
 | gutter         	| number 	  |                                                                                	    | 0          	|
 | columnDivision  | integer   |                                                                                     | 12          | allows columns divisions to be overidden (i.e. 24 = smaller columns than 12)
-| minColWidths    | number 	|                                                                                     |             | override the minWidth for all Cols within the Row
+| minColWidths    | number 	  |                                                                                     |             | override the minWidth for all Cols within the Row
 | wrap           	| string  	| `nowrap \| wrap \| wrap-reverse`                                                	  | wrap       	| whether flex items should wrap when the window is resized
 | direction      	| string  	| `row \| row-reverse \| column \| column-reverse`                                  	| row        	|
 | justifyContent 	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| space-evenly` | flex-start 	| justityContent aligns the items inside a flex container along the x axis
 | alignContent   	| string  	| `flex-start \| flex-end \| center \| baseline \| stretch`                          	| stretch    	| alignContent aligns the whole structure according to its value and has no effect when items are in a single line
 | alignItems     	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| stretch`      | stretch    	| alignItems aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
-| className       | string 	  |        	                                                                            |         	| set the className on the Row Element                                        |
-| style 	        | object 	  |        	                                                                             |         	| set the style on the Row Element                                            |
-| debug           | boolean   |                                                                                     | false     | adds bounding boxes to help debug layout issues |
-| height          | string    |                                                                                     | auto      | allows setting the Row height e.g. `height="100%"` |
-| component     | function \| string 	|         | `div`        	        | The component to render the Row as          |
+| className       | string 	  |        	                                                                            |         	  | set the className on the Row Element                                          |
+| style 	        | object 	  |        	                                                                            |         	  | set the style on the Row Element                                              |
+| debug           | boolean   |                                                                                     | false       | adds bounding boxes to help debug layout issues                               |
+| height          | string    |                                                                                     | auto        | allows setting the Row height e.g. `height="100%"`                            |
+| component       | function \| string 	|                                                                           | `div`       | The component to render the Row as                                  |
+| center          | boolean	  |                                                                                     | false       | shortcut to center child `Col` items horizontally and vertically              |
+| fill            | boolean 	|                                                                                     | false       | shortcut that sets `Row` to `height: 100%`                                    |
+| paddingTop      | string 	  |                                                                                     | 0           | sets top padding on `Row`                                                     |
+| paddingLeft     | string 	  |                                                                                     | 0           | sets left padding on `Row`                                                    |
+| paddingBottom   | string 	  |                                                                                     | 0           | sets bottom padding on `Row`                                                  |
+| paddingRight    | string 	  |                                                                                     | 0           | sets right padding on `Row`                                                    |
 
 * `<Row gutter={4} minColWidth={100}>` sets child `Col` flex items to margin of 4px and all min-widths to 100px within `Row`
 * `<Row justifyContext="center">` center justifies child `Col` flex items horizontally within the `Row`

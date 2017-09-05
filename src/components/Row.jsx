@@ -15,10 +15,18 @@ const RowStyle = styled(({ component, children, ...props }) =>
   align-content: ${props => props.alignContent};
   align-items: ${props => props.alignItems};
   ${props => props.debug && 'border: 1px solid red'};
+  ${props => props.paddingTop && `padding-top: ${props.paddingTop}`};
+  ${props => props.paddingLeft && `padding-left: ${props.paddingLeft}`};
+  ${props => props.paddingBottom && `padding-bottom: ${props.paddingBottom}`};
+  ${props => props.paddingRight && `padding-right: ${props.paddingRight}`};
   ${props => props.height && `height: ${props.height}`};
+  ${props => props.fill && 'height: 100%'}
 `;
 
 const Row = (props) => {
+  const horizontal = props.center ? 'center' : props.justifyContent;
+  const vertical = props.center ? 'center' : props.alignItems;
+
   const renderChildren = () => {
     const { gutter, columnDivisions, debug, minColWidths, children } = props;
 
@@ -40,14 +48,20 @@ const Row = (props) => {
     <RowStyle
       wrap={props.wrap}
       direction={props.direction}
-      justifyContent={props.justifyContent}
+      justifyContent={horizontal}
       alignContent={props.alignContent}
-      alignItems={props.alignItems}
+      alignItems={vertical}
       minColWidths={props.minColWidths}
       className={props.className}
       style={props.style}
       debug={props.debug}
       height={props.height}
+      paddingTop={props.paddingTop}
+      paddingLeft={props.paddingLeft}
+      paddingBottom={props.paddingBottom}
+      paddingRight={props.paddingRight}
+      center={props.center}
+      fill={props.fill}
       component={props.component}
     >
       {renderChildren(props)}
@@ -122,6 +136,36 @@ Row.propTypes = {
    * set the height of the `Row`
    */
   height: PropTypes.string,
+
+  /**
+   * set the padding-top of the `Row`
+   */
+  paddingTop: PropTypes.string,
+
+  /**
+   * set the padding-left of the `Row`
+   */
+  paddingLeft: PropTypes.string,
+
+  /**
+   * set the padding-bottom of the `Row`
+   */
+  paddingBottom: PropTypes.string,
+
+  /**
+   * set the padding-right of the `Row`
+   */
+  paddingRight: PropTypes.string,
+
+  /**
+   * shortcut to center the `Col` items within a `Row`
+   */
+  center: PropTypes.bool,
+
+  /**
+   * shortcut to fill the `Row` to `height: 100%`
+   */
+  fill: PropTypes.bool,
 };
 
 Row.defaultProps = {
@@ -138,6 +182,12 @@ Row.defaultProps = {
   alignItems: 'stretch',
   debug: false,
   height: 'auto',
+  paddingTop: 0,
+  paddingLeft: 0,
+  paddingBottom: 0,
+  paddingRight: 0,
+  center: false,
+  fill: false,
 };
 
 export default Row;

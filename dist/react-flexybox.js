@@ -1552,7 +1552,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', '\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', '\n']);
 
 var _react = __webpack_require__(2);
 
@@ -1595,10 +1595,23 @@ var RowStyle = (0, _styledComponents2.default)(function (_ref) {
 }, function (props) {
   return props.debug && 'border: 1px solid red';
 }, function (props) {
+  return props.paddingTop && 'padding-top: ' + props.paddingTop;
+}, function (props) {
+  return props.paddingLeft && 'padding-left: ' + props.paddingLeft;
+}, function (props) {
+  return props.paddingBottom && 'padding-bottom: ' + props.paddingBottom;
+}, function (props) {
+  return props.paddingRight && 'padding-right: ' + props.paddingRight;
+}, function (props) {
   return props.height && 'height: ' + props.height;
+}, function (props) {
+  return props.fill && 'height: 100%';
 });
 
 var Row = function Row(props) {
+  var horizontal = props.center ? 'center' : props.justifyContent;
+  var vertical = props.center ? 'center' : props.alignItems;
+
   var renderChildren = function renderChildren() {
     var gutter = props.gutter,
         columnDivisions = props.columnDivisions,
@@ -1626,14 +1639,20 @@ var Row = function Row(props) {
     {
       wrap: props.wrap,
       direction: props.direction,
-      justifyContent: props.justifyContent,
+      justifyContent: horizontal,
       alignContent: props.alignContent,
-      alignItems: props.alignItems,
+      alignItems: vertical,
       minColWidths: props.minColWidths,
       className: props.className,
       style: props.style,
       debug: props.debug,
       height: props.height,
+      paddingTop: props.paddingTop,
+      paddingLeft: props.paddingLeft,
+      paddingBottom: props.paddingBottom,
+      paddingRight: props.paddingRight,
+      center: props.center,
+      fill: props.fill,
       component: props.component
     },
     renderChildren(props)
@@ -1706,7 +1725,37 @@ Row.propTypes = {
   /**
    * set the height of the `Row`
    */
-  height: _propTypes2.default.string
+  height: _propTypes2.default.string,
+
+  /**
+   * set the padding-top of the `Row`
+   */
+  paddingTop: _propTypes2.default.string,
+
+  /**
+   * set the padding-left of the `Row`
+   */
+  paddingLeft: _propTypes2.default.string,
+
+  /**
+   * set the padding-bottom of the `Row`
+   */
+  paddingBottom: _propTypes2.default.string,
+
+  /**
+   * set the padding-right of the `Row`
+   */
+  paddingRight: _propTypes2.default.string,
+
+  /**
+   * shortcut to center the `Col` items within a `Row`
+   */
+  center: _propTypes2.default.bool,
+
+  /**
+   * shortcut to fill the `Row` to `height: 100%`
+   */
+  fill: _propTypes2.default.bool
 };
 
 Row.defaultProps = {
@@ -1722,7 +1771,13 @@ Row.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'stretch',
   debug: false,
-  height: 'auto'
+  height: 'auto',
+  paddingTop: 0,
+  paddingLeft: 0,
+  paddingBottom: 0,
+  paddingRight: 0,
+  center: false,
+  fill: false
 };
 
 exports.default = Row;

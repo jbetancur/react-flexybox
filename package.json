@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "React CSS Flexbox Components",
   "main": "dist/react-flexybox.js",
   "scripts": {
