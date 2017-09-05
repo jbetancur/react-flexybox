@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Col from './Col';
 
-const RowStyle = styled.div`
+const RowStyle = styled(({ component, children, ...props }) =>
+  React.createElement(component, props, children))`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
@@ -47,6 +48,7 @@ const Row = (props) => {
       style={props.style}
       debug={props.debug}
       height={props.height}
+      component={props.component}
     >
       {renderChildren(props)}
     </RowStyle>
@@ -87,6 +89,11 @@ Row.propTypes = {
   wrap: PropTypes.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
 
   /**
+   * The component to render the `Row` as
+   */
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+
+  /**
    * set the `Row` direction
    */
   direction: PropTypes.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
@@ -124,6 +131,7 @@ Row.defaultProps = {
   className: '',
   style: {},
   wrap: 'wrap',
+  component: 'div',
   direction: 'row',
   justifyContent: 'flex-start',
   alignContent: 'stretch',

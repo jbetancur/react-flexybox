@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { media, genWidth } from '../utils/media';
 
-const ColStyle = styled.div`
+const ColStyle = styled(({ component, children, ...props }) =>
+  React.createElement(component, props, children))`
   box-sizing: border-box;
   margin: ${props => props.gutter}px;
   max-height: 100%;
@@ -61,6 +62,7 @@ const Col = props => (
     className={props.className}
     style={props.style}
     debug={props.debug}
+    component={props.component}
   >
     {props.children}
   </ColStyle>
@@ -85,6 +87,11 @@ Col.propTypes = {
    * inherited from `Row`
    */
   columnDivisions: PropTypes.number.isRequired,
+
+  /**
+   * The component to render the `Col` as
+   */
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
 
   /**
    * inherited from `Row`
@@ -142,6 +149,7 @@ Col.defaultProps = {
   minWidth: false,
   className: '',
   style: {},
+  component: 'div',
   flex: false,
   xs: false,
   sm: false,

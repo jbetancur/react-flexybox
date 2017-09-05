@@ -27,11 +27,12 @@ https://codepen.io/johnnyazee/pen/prqREK/
 ### `<Container />`
 Optional wrapper
 
-| prop  	  |   type  	| values 	| default 	| description                 	                                                    |
-|---------- |:-------:	|--------	|---------	| --------------------------------------------------------------------------------- |
-| fluid 	  | boolean 	|        	| false    	| true: sets content to 100% of page width \| false: sets a max-width for content   |
-| className | string 	  |        	|         	| set the className on the Container Element                                        |
-| style 	  | object 	  |        	|         	| set the style on the Container Element                                            |
+| prop  	  |   type  	          | values 	| default 	| description                 	                                                    |
+|---------- |:------------------:	|--------	|---------	| --------------------------------------------------------------------------------- |
+| fluid 	  | boolean 	          |        	| false    	| true: sets content to 100% of page width \| false: sets a max-width for content   |
+| className | string 	            |        	|         	| set the className on the Container Element                                        |
+| style 	  | object 	            |        	|         	| set the style on the Container Element                                            |
+| component | function \| string 	|         | `div`     | The component to render the Container as                                          |
 
 ### `<Row>`
 Row wraps Cols
@@ -50,6 +51,7 @@ Row wraps Cols
 | style 	        | object 	  |        	                                                                             |         	| set the style on the Row Element                                            |
 | debug           | boolean   |                                                                                     | false     | adds bounding boxes to help debug layout issues |
 | height          | string    |                                                                                     | auto      | allows setting the Row height e.g. `height="100%"` |
+| component     | function \| string 	|         | `div`        	        | The component to render the Row as          |
 
 * `<Row gutter={4} minColWidth={100}>` sets child `Col` flex items to margin of 4px and all min-widths to 100px within `Row`
 * `<Row justifyContext="center">` center justifies child `Col` flex items horizontally within the `Row`
@@ -69,6 +71,7 @@ Flex Items
 | lg    	  | number            	|        	| `1-12`                | 1280px or greater           	              |
 | className | string 	            |        	|         	            | set the className on the Col Element        |
 | style 	  | object 	            |         |         	            | set the style on the Col Element            |
+| component | function \| string 	|         | `div`        	        | The component to render the Col as          |
 
 * `<Col flex={6}>` sets the default flex size
 * `<Col flex>` sets the item to auto stretch

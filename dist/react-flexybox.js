@@ -606,9 +606,17 @@ var _media = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ColStyle = _styledComponents2.default.div(_templateObject, function (props) {
+var ColStyle = (0, _styledComponents2.default)(function (_ref) {
+  var component = _ref.component,
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ['component', 'children']);
+
+  return _react2.default.createElement(component, props, children);
+})(_templateObject, function (props) {
   return props.gutter;
 }, function (props) {
   return props.order;
@@ -645,7 +653,8 @@ var Col = function Col(props) {
       minWidth: props.minWidth,
       className: props.className,
       style: props.style,
-      debug: props.debug
+      debug: props.debug,
+      component: props.component
     },
     props.children
   );
@@ -666,6 +675,11 @@ Col.propTypes = {
    * inherited from `Row`
    */
   columnDivisions: _propTypes2.default.number.isRequired,
+
+  /**
+   * The component to render the `Col` as
+   */
+  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]).isRequired,
 
   /**
    * inherited from `Row`
@@ -723,6 +737,7 @@ Col.defaultProps = {
   minWidth: false,
   className: '',
   style: {},
+  component: 'div',
   flex: false,
   xs: false,
   sm: false,
@@ -797,9 +812,17 @@ var _media = __webpack_require__(8);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ContainerStyle = _styledComponents2.default.div(_templateObject, function (props) {
+var ContainerStyle = (0, _styledComponents2.default)(function (_ref) {
+  var component = _ref.component,
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ['component', 'children']);
+
+  return _react2.default.createElement(component, props, children);
+})(_templateObject, function (props) {
   return props.fluid && 'width: 100%;';
 }, function (props) {
   return !props.fluid && _media.fluid.xs(_templateObject2);
@@ -819,7 +842,8 @@ var Container = function Container(props) {
     {
       fluid: props.fluid,
       className: props.className,
-      style: props.style
+      style: props.style,
+      component: props.component
     },
     props.children
   );
@@ -832,17 +856,31 @@ Container.propTypes = {
   children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]).isRequired,
 
   /**
+   * The component to render the `Container` as.
+   */
+  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]).isRequired,
+
+  /**
    * full width or controlled width layout
    */
   fluid: _propTypes2.default.bool,
+
+  /**
+   * override the `className` on the root element of Row
+   */
   className: _propTypes2.default.string,
+
+  /**
+   * overide the `style` on the root element of Row
+   */
   style: _propTypes2.default.object
 };
 
 Container.defaultProps = {
   fluid: false,
   className: '',
-  style: {}
+  style: {},
+  component: 'div'
 };
 
 exports.default = Container;
@@ -1534,9 +1572,17 @@ var _Col2 = _interopRequireDefault(_Col);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var RowStyle = _styledComponents2.default.div(_templateObject, function (props) {
+var RowStyle = (0, _styledComponents2.default)(function (_ref) {
+  var component = _ref.component,
+      children = _ref.children,
+      props = _objectWithoutProperties(_ref, ['component', 'children']);
+
+  return _react2.default.createElement(component, props, children);
+})(_templateObject, function (props) {
   return props.direction;
 }, function (props) {
   return props.wrap;
@@ -1587,7 +1633,8 @@ var Row = function Row(props) {
       className: props.className,
       style: props.style,
       debug: props.debug,
-      height: props.height
+      height: props.height,
+      component: props.component
     },
     renderChildren(props)
   );
@@ -1627,6 +1674,11 @@ Row.propTypes = {
   wrap: _propTypes2.default.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
 
   /**
+   * The component to render the `Row` as
+   */
+  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]).isRequired,
+
+  /**
    * set the `Row` direction
    */
   direction: _propTypes2.default.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
@@ -1664,6 +1716,7 @@ Row.defaultProps = {
   className: '',
   style: {},
   wrap: 'wrap',
+  component: 'div',
   direction: 'row',
   justifyContent: 'flex-start',
   alignContent: 'stretch',
