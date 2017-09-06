@@ -44,6 +44,7 @@ const Container = props => (
     className={props.className}
     style={props.style}
     component={props.component}
+    {...props}
   >
     {props.children}
   </ContainerStyle>
