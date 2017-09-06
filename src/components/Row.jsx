@@ -1,10 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { createComponent } from '../utils/styled';
 import Col from './Col';
 
-const RowStyle = styled(({ component, children, ...props }) =>
-  React.createElement(component, props, children))`
+const agnosticComponent = createComponent({
+  propsToOmit: [
+    'wrap',
+    'direction',
+    'justifyContent',
+    'alignContent',
+    'alignItems',
+    'minColWidths',
+    'debug',
+    'height',
+    'padding',
+    'paddingTop',
+    'paddingLeft',
+    'paddingBottom',
+    'paddingRight',
+    'center',
+    'fill',
+    'component',
+  ]
+});
+
+const RowStyle = styled(agnosticComponent)`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
@@ -19,6 +40,7 @@ const RowStyle = styled(({ component, children, ...props }) =>
   ${props => props.paddingLeft && `padding-left: ${props.paddingLeft}`};
   ${props => props.paddingBottom && `padding-bottom: ${props.paddingBottom}`};
   ${props => props.paddingRight && `padding-right: ${props.paddingRight}`};
+  ${props => props.padding && `padding: ${props.padding}`};
   ${props => props.height && `height: ${props.height}`};
   ${props => props.fill && 'height: 100%'}
 `;
@@ -26,12 +48,11 @@ const RowStyle = styled(({ component, children, ...props }) =>
 const Row = (props) => {
   const horizontal = props.center ? 'center' : props.justifyContent;
   const vertical = props.center ? 'center' : props.alignItems;
-
   const renderChildren = () => {
     const { gutter, columnDivisions, debug, minColWidths, children } = props;
 
     return React.Children.map(children, (child) => {
-      if (child.type && child.type === Col) {
+      if (child && child.type === Col) {
         return React.cloneElement(child, {
           gutter,
           columnDivisions,
@@ -56,6 +77,7 @@ const Row = (props) => {
       style={props.style}
       debug={props.debug}
       height={props.height}
+      padding={props.padding}
       paddingTop={props.paddingTop}
       paddingLeft={props.paddingLeft}
       paddingBottom={props.paddingBottom}
@@ -105,7 +127,7 @@ Row.propTypes = {
   /**
    * The component to render the `Row` as
    */
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 
   /**
    * set the `Row` direction
@@ -136,6 +158,11 @@ Row.propTypes = {
    * set the height of the `Row`
    */
   height: PropTypes.string,
+
+  /**
+   * set the padding of the `Row`
+   */
+  padding: PropTypes.string,
 
   /**
    * set the padding-top of the `Row`
@@ -182,10 +209,11 @@ Row.defaultProps = {
   alignItems: 'stretch',
   debug: false,
   height: 'auto',
-  paddingTop: 0,
-  paddingLeft: 0,
-  paddingBottom: 0,
-  paddingRight: 0,
+  padding: '',
+  paddingTop: '',
+  paddingLeft: '',
+  paddingBottom: '',
+  paddingRight: '',
   center: false,
   fill: false,
 };

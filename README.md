@@ -3,7 +3,7 @@
 React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox. If you've used the bootstrao layout sytem them react-flexybox should already be familiar.
 
 * Straight forward and familiar API for controlling your layout
-* lightweight when minimized ~19kb
+* lightweight when minimized ~29kb
 * built with styled-components - no need to add loaders for css/scss
 * easily override flex item widths using minWidthCols or minWidth
 
@@ -51,13 +51,14 @@ Row wraps Cols
 | style 	        | object 	  |        	                                                                            |         	  | set the style on the Row Element                                              |
 | debug           | boolean   |                                                                                     | false       | adds bounding boxes to help debug layout issues                               |
 | height          | string    |                                                                                     | auto        | allows setting the Row height e.g. `height="100%"`                            |
-| component       | function \| string 	|                                                                           | `div`       | The component to render the Row as                                  |
+| component       | function \| string 	|                                                                           | `div`       | The component to render the Row as                                            |
 | center          | boolean	  |                                                                                     | false       | shortcut to center child `Col` items horizontally and vertically              |
 | fill            | boolean 	|                                                                                     | false       | shortcut that sets `Row` to `height: 100%`                                    |
-| paddingTop      | string 	  |                                                                                     | 0           | sets top padding on `Row`                                                     |
-| paddingLeft     | string 	  |                                                                                     | 0           | sets left padding on `Row`                                                    |
-| paddingBottom   | string 	  |                                                                                     | 0           | sets bottom padding on `Row`                                                  |
-| paddingRight    | string 	  |                                                                                     | 0           | sets right padding on `Row`                                                    |
+| padding         | string 	  |                                                                                     | 0           | sets padding on `Row`                                                         |
+| paddingTop      | string 	  |                                                                                     | 0           | sets padding-top on `Row`                                                     |
+| paddingLeft     | string 	  |                                                                                     | 0           | sets padding-left on `Row`                                                    |
+| paddingBottom   | string 	  |                                                                                     | 0           | sets padding-bottom `Row`                                                     |
+| paddingRight    | string 	  |                                                                                     | 0           | sets padding-right on `Row`                                                   |
 
 * `<Row gutter={4} minColWidth={100}>` sets child `Col` flex items to margin of 4px and all min-widths to 100px within `Row`
 * `<Row justifyContext="center">` center justifies child `Col` flex items horizontally within the `Row`
