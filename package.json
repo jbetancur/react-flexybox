@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "0.3.6",
+  "version": "0.4.0",
   "description": "React CSS Flexbox Components",
   "main": "dist/react-flexybox.js",
   "scripts": {
@@ -56,6 +56,7 @@
   },
   "homepage": "https://react-flexybox.netlify.com/",
   "dependencies": {
+    "lodash.omit": "^4.5.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "styled-components": "^2.1.2"

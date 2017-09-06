@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { createComponent } from '../utils/styled';
 import { fluid } from '../utils/media';
 
-const ContainerStyle = styled(({ component, children, ...props }) =>
-  React.createElement(component, props, children))`
+const agnosticComponent = createComponent({
+  propsToOmit: [
+    'wrap',
+    'component',
+  ]
+});
+
+const ContainerStyle = styled(agnosticComponent)`
   margin-right: auto;
   margin-left: auto;
   ${props => props.fluid && 'width: 100%;'};
@@ -54,7 +61,7 @@ Container.propTypes = {
   /**
    * The component to render the `Container` as.
    */
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 
   /**
    * full width or controlled width layout

@@ -1,10 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { createComponent } from '../utils/styled';
 import { media, genWidth } from '../utils/media';
 
-const ColStyle = styled(({ component, children, ...props }) =>
-  React.createElement(component, props, children))`
+const agnosticComponent = createComponent({
+  propsToOmit: [
+    'flex',
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'gutter',
+    'columnDivisions',
+    'order',
+    'minWidth',
+    'debug',
+    'component',
+  ]
+});
+
+const ColStyle = styled(agnosticComponent)`
   box-sizing: border-box;
   margin: ${props => props.gutter}px;
   max-height: 100%;
@@ -58,9 +74,9 @@ const Col = props => (
     gutter={props.gutter}
     columnDivisions={props.columnDivisions}
     order={props.order}
-    minWidth={props.minWidth}
     className={props.className}
     style={props.style}
+    minWidth={props.minWidth}
     debug={props.debug}
     component={props.component}
   >
@@ -76,7 +92,7 @@ Col.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired,
+  ]),
 
   /**
    * inherited from `Row`
@@ -91,12 +107,12 @@ Col.propTypes = {
   /**
    * The component to render the `Col` as
    */
-  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+  component: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 
   /**
    * inherited from `Row`
    */
-  debug: PropTypes.bool.isRequired,
+  debug: PropTypes.bool,
 
   /**
    * allows overriding the `Col` item order
@@ -145,6 +161,7 @@ Col.propTypes = {
 };
 
 Col.defaultProps = {
+  children: null,
   order: 0,
   minWidth: false,
   className: '',
@@ -155,6 +172,9 @@ Col.defaultProps = {
   sm: false,
   md: false,
   lg: false,
+  gutter: 0,
+  columnDivisions: 12,
+  debug: false,
 };
 
 export default Col;
