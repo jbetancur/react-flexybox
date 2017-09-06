@@ -85,6 +85,7 @@ const Row = (props) => {
       center={props.center}
       fill={props.fill}
       component={props.component}
+      {...props}
     >
       {renderChildren(props)}
     </RowStyle>

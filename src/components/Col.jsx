@@ -79,6 +79,7 @@ const Col = props => (
     minWidth={props.minWidth}
     debug={props.debug}
     component={props.component}
+    {...props}
   >
     {props.children}
   </ColStyle>

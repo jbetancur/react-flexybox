@@ -637,6 +637,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
 
@@ -689,7 +691,7 @@ var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObjec
 var Col = function Col(props) {
   return _react2.default.createElement(
     ColStyle,
-    {
+    _extends({
       flex: props.flex,
       xs: props.xs,
       sm: props.sm,
@@ -703,7 +705,7 @@ var Col = function Col(props) {
       minWidth: props.minWidth,
       debug: props.debug,
       component: props.component
-    },
+    }, props),
     props.children
   );
 };
@@ -841,6 +843,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _templateObject = _taggedTemplateLiteral(['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n'], ['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
     _templateObject3 = _taggedTemplateLiteral(['\n    max-width: 34rem;\n  '], ['\n    max-width: 34rem;\n  ']),
@@ -889,12 +893,12 @@ var ContainerStyle = (0, _styledComponents2.default)(agnosticComponent)(_templat
 var Container = function Container(props) {
   return _react2.default.createElement(
     ContainerStyle,
-    {
+    _extends({
       fluid: props.fluid,
       className: props.className,
       style: props.style,
       component: props.component
-    },
+    }, props),
     props.children
   );
 };
@@ -3124,6 +3128,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', '\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-content: ', ';\n  align-items: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', '\n']);
 
 var _react = __webpack_require__(1);
@@ -3207,7 +3213,7 @@ var Row = function Row(props) {
 
   return _react2.default.createElement(
     RowStyle,
-    {
+    _extends({
       wrap: props.wrap,
       direction: props.direction,
       justifyContent: horizontal,
@@ -3226,7 +3232,7 @@ var Row = function Row(props) {
       center: props.center,
       fill: props.fill,
       component: props.component
-    },
+    }, props),
     renderChildren(props)
   );
 };
