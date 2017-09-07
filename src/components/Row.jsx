@@ -32,22 +32,19 @@ const RowStyle = styled(agnosticComponent)`
   width: 100%;
   flex-direction: ${props => props.direction};
   flex-wrap: ${props => props.wrap};
-  justify-content: ${props => props.justifyContent};
+  justify-content: ${props => (props.center ? 'center' : props.justifyContent)};
+  align-items: ${props => (props.center ? 'center' : props.alignItems)};
   align-content: ${props => props.alignContent};
-  align-items: ${props => props.alignItems};
   ${props => props.debug && 'border: 1px solid red'};
   ${props => props.paddingTop && `padding-top: ${props.paddingTop}`};
   ${props => props.paddingLeft && `padding-left: ${props.paddingLeft}`};
   ${props => props.paddingBottom && `padding-bottom: ${props.paddingBottom}`};
   ${props => props.paddingRight && `padding-right: ${props.paddingRight}`};
   ${props => props.padding && `padding: ${props.padding}`};
-  ${props => props.height && `height: ${props.height}`};
-  ${props => props.fill && 'height: 100%'}
+  ${props => (props.fill ? 'height: 100%' : props.height)};
 `;
 
 const Row = (props) => {
-  const horizontal = props.center ? 'center' : props.justifyContent;
-  const vertical = props.center ? 'center' : props.alignItems;
   const renderChildren = () => {
     const { gutter, columnDivisions, debug, minColWidths, children } = props;
 
@@ -69,9 +66,9 @@ const Row = (props) => {
     <RowStyle
       wrap={props.wrap}
       direction={props.direction}
-      justifyContent={horizontal}
+      justifyContent={props.justifyContent}
       alignContent={props.alignContent}
-      alignItems={vertical}
+      alignItems={props.alignItems}
       minColWidths={props.minColWidths}
       className={props.className}
       style={props.style}
