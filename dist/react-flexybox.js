@@ -3155,7 +3155,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var agnosticComponent = (0, _styled.createComponent)({
-  propsToOmit: ['wrap', 'direction', 'justifyContent', 'alignContent', 'alignItems', 'minColWidths', 'debug', 'height', 'padding', 'paddingTop', 'paddingLeft', 'paddingBottom', 'paddingRight', 'center', 'fill', 'component']
+  propsToOmit: ['wrap', 'direction', 'justifyContent', 'alignContent', 'alignItems', 'minColWidths', 'debug', 'height', 'padding', 'paddingTop', 'paddingLeft', 'paddingBottom', 'paddingRight', 'center', 'fill', 'component', 'gutter', 'columnDivisions']
 });
 
 var RowStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
