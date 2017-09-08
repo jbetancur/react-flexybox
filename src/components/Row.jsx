@@ -22,6 +22,8 @@ const agnosticComponent = createComponent({
     'center',
     'fill',
     'component',
+    'gutter',
+    'columnDivisions',
   ]
 });
 
