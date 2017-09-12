@@ -26,7 +26,7 @@ const ColStyle = styled(agnosticComponent)`
   margin: ${props => props.gutter}px;
   max-height: 100%;
   order: ${props => props.order};
-  ${props => props.alignSelf && `align-self: ${props.alignSelf}`};
+  align-self: ${props => props.alignSelf};
   ${props => props.debug && 'border: 1px solid green'};
 
   ${props => props.flex && media.flex`
@@ -170,7 +170,7 @@ Col.propTypes = {
 };
 
 Col.defaultProps = {
-  alignSelf: '',
+  alignSelf: 'auto',
   children: null,
   order: 0,
   minWidth: false,
