@@ -71,7 +71,7 @@ Flex Items
 |---------- |:------------------:	|-------------------------------------------------------------------- |----------------------	|-------------------------------------------- |
 | order 	  | integer            	|        	                                                            | 0       	            | set the order of flex items     	          |
 | minWidth  | number            	|        	                                                            |        	              | override the minWidth      	                |
-| alignSelf | string              | `auto \| flex-start \| flex-end \| center \| baseline \| stretch`   |    	                  | sets the default flex size  	              |
+| alignSelf | string              | `auto \| flex-start \| flex-end \| center \| baseline \| stretch`   | auto   	              | center the alignments for one of the items inside a flexible element  	              |
 | flex  	  | boolean \| number   |  	                                                                  | `false \| 1-12`   	  | sets the default flex size  	              |
 | xs    	  | number            	|        	                                                            | `1-12`                | 0 - 599px                                   |
 | sm    	  | number            	|        	                                                            | `1-12`   	            | 600 - 959px                                 |
