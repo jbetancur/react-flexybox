@@ -6,6 +6,7 @@ import { media, genWidth } from '../utils/media';
 
 const agnosticComponent = createComponent({
   propsToOmit: [
+    'alignSelf',
     'flex',
     'xs',
     'sm',
@@ -25,6 +26,7 @@ const ColStyle = styled(agnosticComponent)`
   margin: ${props => props.gutter}px;
   max-height: 100%;
   order: ${props => props.order};
+  ${props => props.alignSelf && `align-self: ${props.alignSelf}`};
   ${props => props.debug && 'border: 1px solid green'};
 
   ${props => props.flex && media.flex`
@@ -66,6 +68,7 @@ const ColStyle = styled(agnosticComponent)`
 
 const Col = props => (
   <ColStyle
+    alignSelf={props.alignSelf}
     flex={props.flex}
     xs={props.xs}
     sm={props.sm}
@@ -94,6 +97,11 @@ Col.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
+
+  /**
+   * aligns the whole structure according to its value and has no effect when items are in a single line
+   */
+  alignSelf: PropTypes.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
 
   /**
    * inherited from `Row`
@@ -162,6 +170,7 @@ Col.propTypes = {
 };
 
 Col.defaultProps = {
+  alignSelf: '',
   children: null,
   order: 0,
   minWidth: false,
