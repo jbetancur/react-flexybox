@@ -639,7 +639,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
 
 var _react = __webpack_require__(1);
@@ -663,13 +663,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var agnosticComponent = (0, _styled.createComponent)({
-  propsToOmit: ['flex', 'xs', 'sm', 'md', 'lg', 'gutter', 'columnDivisions', 'order', 'minWidth', 'debug', 'component']
+  propsToOmit: ['alignSelf', 'flex', 'xs', 'sm', 'md', 'lg', 'gutter', 'columnDivisions', 'order', 'minWidth', 'debug', 'component']
 });
 
 var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
   return props.gutter;
 }, function (props) {
   return props.order;
+}, function (props) {
+  return props.alignSelf && 'align-self: ' + props.alignSelf;
 }, function (props) {
   return props.debug && 'border: 1px solid green';
 }, function (props) {
@@ -692,6 +694,7 @@ var Col = function Col(props) {
   return _react2.default.createElement(
     ColStyle,
     _extends({
+      alignSelf: props.alignSelf,
       flex: props.flex,
       xs: props.xs,
       sm: props.sm,
@@ -715,6 +718,11 @@ Col.propTypes = {
    * react/html elements
    */
   children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+
+  /**
+   * aligns the whole structure according to its value and has no effect when items are in a single line
+   */
+  alignSelf: _propTypes2.default.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
 
   /**
    * inherited from `Row`
@@ -783,6 +791,7 @@ Col.propTypes = {
 };
 
 Col.defaultProps = {
+  alignSelf: '',
   children: null,
   order: 0,
   minWidth: false,

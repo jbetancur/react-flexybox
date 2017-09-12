@@ -67,18 +67,19 @@ Row wraps Cols
 ### `<Col>`
 Flex Items
 
-| prop  	  |        type        	| values 	| default 	            | description                 	              |
-|---------- |:------------------:	|--------	|----------------------	|-------------------------------------------- |
-| order 	  | integer            	|        	| 0       	            | set the order of flex items     	          |
-| minWidth  | number            	|        	|        	              | override the minWidth      	                |
-| flex  	  | boolean \| number   |  	      | `false \| 1-12`   	  | sets the default flex size  	              |
-| xs    	  | number            	|        	| `1-12`                | 0 - 599px                                   |
-| sm    	  | number            	|        	| `1-12`   	            | 600 - 959px                                 |
-| md    	  | number            	|        	| `1-12`                | 960px - 1280px              	              |
-| lg    	  | number            	|        	| `1-12`                | 1280px or greater           	              |
-| className | string 	            |        	|         	            | set the className on the Col Element        |
-| style 	  | object 	            |         |         	            | set the style on the Col Element            |
-| component | function \| string 	|         | `div`        	        | The component to render the Col as          |
+| prop  	  |        type        	| values 	                                                            | default 	            | description                 	              |
+|---------- |:------------------:	|-------------------------------------------------------------------- |----------------------	|-------------------------------------------- |
+| order 	  | integer            	|        	                                                            | 0       	            | set the order of flex items     	          |
+| minWidth  | number            	|        	                                                            |        	              | override the minWidth      	                |
+| alignSelf | string              | `auto \| flex-start \| flex-end \| center \| baseline \| stretch`   |    	                  | sets the default flex size  	              |
+| flex  	  | boolean \| number   |  	                                                                  | `false \| 1-12`   	  | sets the default flex size  	              |
+| xs    	  | number            	|        	                                                            | `1-12`                | 0 - 599px                                   |
+| sm    	  | number            	|        	                                                            | `1-12`   	            | 600 - 959px                                 |
+| md    	  | number            	|        	                                                            | `1-12`                | 960px - 1280px              	              |
+| lg    	  | number            	|        	                                                            | `1-12`                | 1280px or greater           	              |
+| className | string              |        	                                                            |         	            | set the className on the Col Element        |
+| style 	  | object              |                                                                     |         	            | set the style on the Col Element            |
+| component | function \| string 	|                                                                     | `div`        	        | The component to render the Col as          |
 
 * `<Col flex={6}>` sets the default flex size
 * `<Col flex>` sets the item to auto stretch
