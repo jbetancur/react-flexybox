@@ -43,7 +43,8 @@ const RowStyle = styled(agnosticComponent)`
   ${props => props.paddingBottom && `padding-bottom: ${props.paddingBottom}`};
   ${props => props.paddingRight && `padding-right: ${props.paddingRight}`};
   ${props => props.padding && `padding: ${props.padding}`};
-  ${props => (props.fill ? 'height: 100%' : props.height)};
+  ${props => props.height && `height: ${props.height}`};
+  ${props => props.fill && 'height: 100%'};
 `;
 
 const Row = (props) => {
@@ -208,7 +209,7 @@ Row.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'stretch',
   debug: false,
-  height: 'auto',
+  height: '',
   padding: '',
   paddingTop: '',
   paddingLeft: '',

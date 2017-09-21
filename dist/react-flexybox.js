@@ -3139,7 +3139,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n']);
 
 var _react = __webpack_require__(1);
 
@@ -3190,7 +3190,9 @@ var RowStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObjec
 }, function (props) {
   return props.padding && 'padding: ' + props.padding;
 }, function (props) {
-  return props.fill ? 'height: 100%' : props.height;
+  return props.height && 'height: ' + props.height;
+}, function (props) {
+  return props.fill && 'height: 100%';
 });
 
 var Row = function Row(props) {
@@ -3359,7 +3361,7 @@ Row.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'stretch',
   debug: false,
-  height: 'auto',
+  height: '',
   padding: '',
   paddingTop: '',
   paddingLeft: '',
