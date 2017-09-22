@@ -39,14 +39,6 @@ describe('Col', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('it mounts Col with debug prop', () => {
-    const tree = renderer.create(<Col
-      debug
-    />).toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-
   test('it overrides default Col minWidth with minWidth prop', () => {
     const tree = renderer.create(<Col
       flex={12}

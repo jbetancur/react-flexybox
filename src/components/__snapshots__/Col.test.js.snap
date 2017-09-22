@@ -140,26 +140,6 @@ exports[`Col it mounts <Col component="span" /> 1`] = `
 </Col>
 `;
 
-exports[`Col it mounts Col with debug prop 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0px;
-  max-height: 100%;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-  border: 1px solid green;
-}
-
-<div
-  className="c0"
-  style={Object {}}
-/>
-`;
-
 exports[`Col it mounts Col with flex: auto 1`] = `
 .c0 {
   box-sizing: border-box;
