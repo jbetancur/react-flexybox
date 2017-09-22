@@ -8,6 +8,7 @@ const agnosticComponent = createComponent({
   propsToOmit: [
     'wrap',
     'component',
+    'fluid',
   ]
 });
 
@@ -57,7 +58,7 @@ Container.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired,
+  ]),
 
   /**
    * The component to render the `Container` as.
@@ -81,6 +82,7 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
+  children: [],
   fluid: false,
   className: '',
   style: {},

@@ -1,0 +1,450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col it mounts <Col /> 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+<Col
+  alignSelf="auto"
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={false}
+  flex={false}
+  gutter={0}
+  lg={false}
+  md={false}
+  minWidth={false}
+  order={0}
+  sm={false}
+  style={Object {}}
+  xs={false}
+>
+  <Styled(Component)
+    alignSelf="auto"
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={false}
+    flex={false}
+    gutter={0}
+    lg={false}
+    md={false}
+    minWidth={false}
+    order={0}
+    sm={false}
+    style={Object {}}
+    xs={false}
+  >
+    <Component
+      alignSelf="auto"
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={false}
+      flex={false}
+      gutter={0}
+      lg={false}
+      md={false}
+      minWidth={false}
+      order={0}
+      sm={false}
+      style={Object {}}
+      xs={false}
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      />
+    </Component>
+  </Styled(Component)>
+</Col>
+`;
+
+exports[`Col it mounts <Col component="span" /> 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+<Col
+  alignSelf="auto"
+  className=""
+  columnDivisions={12}
+  component="span"
+  debug={false}
+  flex={false}
+  gutter={0}
+  lg={false}
+  md={false}
+  minWidth={false}
+  order={0}
+  sm={false}
+  style={Object {}}
+  xs={false}
+>
+  <Styled(Component)
+    alignSelf="auto"
+    className=""
+    columnDivisions={12}
+    component="span"
+    debug={false}
+    flex={false}
+    gutter={0}
+    lg={false}
+    md={false}
+    minWidth={false}
+    order={0}
+    sm={false}
+    style={Object {}}
+    xs={false}
+  >
+    <Component
+      alignSelf="auto"
+      className="c0"
+      columnDivisions={12}
+      component="span"
+      debug={false}
+      flex={false}
+      gutter={0}
+      lg={false}
+      md={false}
+      minWidth={false}
+      order={0}
+      sm={false}
+      style={Object {}}
+      xs={false}
+    >
+      <span
+        className="c0"
+        style={Object {}}
+      />
+    </Component>
+  </Styled(Component)>
+</Col>
+`;
+
+exports[`Col it mounts Col with debug prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  border: 1px solid green;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Col it mounts Col with flex: auto 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  --width: calc(8.333333333333332% - 0px);
+  -webkit-flex: 0 1 var(--width);
+  -ms-flex: 0 1 var(--width);
+  flex: 0 1 var(--width);
+  min-width: var(--width);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Col it overrides Col flex when xs 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  --width: calc(50% - 0px);
+  -webkit-flex: 0 1 var(--width);
+  -ms-flex: 0 1 var(--width);
+  flex: 0 1 var(--width);
+  min-width: var(--width);
+}
+
+@media (min-width:0) and (max-width:599px) {
+  .c0 {
+    --width: calc(100% - 0px);
+    -webkit-flex: 0 1 var(--width);
+    -ms-flex: 0 1 var(--width);
+    flex: 0 1 var(--width);
+    min-width: var(--width);
+  }
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Col it overrides default Col minWidth with minWidth prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  --width: calc(100% - 0px);
+  -webkit-flex: 0 1 var(--width);
+  -ms-flex: 0 1 var(--width);
+  flex: 0 1 var(--width);
+  min-width: var(--width);
+  min-width: 42px;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Col it overrides the default component as a component 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+<Col
+  alignSelf="auto"
+  className=""
+  columnDivisions={12}
+  component={[Function]}
+  debug={false}
+  flex={false}
+  gutter={0}
+  lg={false}
+  md={false}
+  minWidth={false}
+  order={0}
+  sm={false}
+  style={Object {}}
+  xs={false}
+>
+  <Styled(Component)
+    alignSelf="auto"
+    className=""
+    columnDivisions={12}
+    component={[Function]}
+    debug={false}
+    flex={false}
+    gutter={0}
+    lg={false}
+    md={false}
+    minWidth={false}
+    order={0}
+    sm={false}
+    style={Object {}}
+    xs={false}
+  >
+    <Component
+      alignSelf="auto"
+      className="c0"
+      columnDivisions={12}
+      component={[Function]}
+      debug={false}
+      flex={false}
+      gutter={0}
+      lg={false}
+      md={false}
+      minWidth={false}
+      order={0}
+      sm={false}
+      style={Object {}}
+      xs={false}
+    >
+      <Faux
+        className="c0"
+        style={Object {}}
+      >
+        <div />
+      </Faux>
+    </Component>
+  </Styled(Component)>
+</Col>
+`;
+
+exports[`Col it renders children 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+<Col
+  alignSelf="auto"
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={false}
+  flex={false}
+  gutter={0}
+  lg={false}
+  md={false}
+  minWidth={false}
+  order={0}
+  sm={false}
+  style={Object {}}
+  xs={false}
+>
+  <Styled(Component)
+    alignSelf="auto"
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={false}
+    flex={false}
+    gutter={0}
+    lg={false}
+    md={false}
+    minWidth={false}
+    order={0}
+    sm={false}
+    style={Object {}}
+    xs={false}
+  >
+    <Component
+      alignSelf="auto"
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={false}
+      flex={false}
+      gutter={0}
+      lg={false}
+      md={false}
+      minWidth={false}
+      order={0}
+      sm={false}
+      style={Object {}}
+      xs={false}
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      >
+        <section />
+      </div>
+    </Component>
+  </Styled(Component)>
+</Col>
+`;
+
+exports[`Col it sets size props 1`] = `
+.c0 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+@media (min-width:0) and (max-width:599px) {
+  .c0 {
+    --width: calc(100% - 0px);
+    -webkit-flex: 0 1 var(--width);
+    -ms-flex: 0 1 var(--width);
+    flex: 0 1 var(--width);
+    min-width: var(--width);
+  }
+}
+
+@media (min-width:600px) and (max-width:959px) {
+  .c0 {
+    --width: calc(50% - 0px);
+    -webkit-flex: 0 1 var(--width);
+    -ms-flex: 0 1 var(--width);
+    flex: 0 1 var(--width);
+    min-width: var(--width);
+  }
+}
+
+@media (min-width:960px) and (max-width:1280px) {
+  .c0 {
+    --width: calc(25% - 0px);
+    -webkit-flex: 0 1 var(--width);
+    -ms-flex: 0 1 var(--width);
+    flex: 0 1 var(--width);
+    min-width: var(--width);
+  }
+}
+
+@media only screen and (min-width:1280px) {
+  .c0 {
+    --width: calc(8.333333333333332% - 0px);
+    -webkit-flex: 0 1 var(--width);
+    -ms-flex: 0 1 var(--width);
+    flex: 0 1 var(--width);
+    min-width: var(--width);
+  }
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;

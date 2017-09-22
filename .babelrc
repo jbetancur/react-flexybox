@@ -1,4 +1,9 @@
 {
   "presets": ["latest", "react"],
-  "plugins": ["babel-plugin-add-module-exports", "transform-object-rest-spread", "transform-object-assign", "transform-class-properties"]
+  "plugins": ["babel-plugin-add-module-exports", "transform-object-rest-spread", "transform-object-assign", "transform-class-properties"],
+  "env": {
+    "test": {
+      "presets": [["latest"], "react"]
+    }
+  }
 }

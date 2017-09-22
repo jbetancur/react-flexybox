@@ -1,6 +1,6 @@
 # React Flexy Box
 
-React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox. If you've used the bootstrao layout sytem them react-flexybox should already be familiar.
+React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox. If you've used the bootstrap layout system, then react-flexybox should already be somewhat familiar.
 
 * Straight forward and familiar API for controlling your layout
 * lightweight when minimized ~29kb
@@ -143,6 +143,7 @@ const {
 
 ## Feature Roadmap
 * offsets
+* Live Demo & Docs (in addition to the codepen)
 
 ## Supported Browsers (CSS)
 Flexy Box CSS is tested on the following browsers, but it will be up to you to set your autoprefixing.
@@ -156,7 +157,7 @@ Flexy Box CSS is tested on the following browsers, but it will be up to you to s
 
 # Contributing
 * The files under the `dev` folder are the ones that should be distributed.*
-* install yarn `npm install yarn -g`
+* install yarn `npm install yarn jest -g`
 
 ## Scripts
 

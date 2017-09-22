@@ -792,7 +792,7 @@ Col.propTypes = {
 
 Col.defaultProps = {
   alignSelf: 'auto',
-  children: null,
+  children: [],
   order: 0,
   minWidth: false,
   className: '',
@@ -882,7 +882,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var agnosticComponent = (0, _styled.createComponent)({
-  propsToOmit: ['wrap', 'component']
+  propsToOmit: ['wrap', 'component', 'fluid']
 });
 
 var ContainerStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
@@ -916,7 +916,7 @@ Container.propTypes = {
   /**
    * react/html elements
    */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]).isRequired,
+  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
 
   /**
    * The component to render the `Container` as.
@@ -940,6 +940,7 @@ Container.propTypes = {
 };
 
 Container.defaultProps = {
+  children: [],
   fluid: false,
   className: '',
   style: {},
