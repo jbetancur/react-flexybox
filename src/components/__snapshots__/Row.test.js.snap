@@ -210,7 +210,20 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
 </Row>
 `;
 
-exports[`Row it mounts Row with debug prop 1`] = `
+exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  border: 1px solid green;
+}
+
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -241,10 +254,136 @@ exports[`Row it mounts Row with debug prop 1`] = `
   border: 1px solid red;
 }
 
-<div
-  className="c0"
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={true}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
   style={Object {}}
-/>
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={true}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={true}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      >
+        <Col
+          alignSelf="auto"
+          className=""
+          columnDivisions={12}
+          component="div"
+          debug={true}
+          flex={false}
+          gutter={0}
+          key=".0"
+          lg={false}
+          md={false}
+          minWidth={false}
+          order={0}
+          sm={false}
+          style={Object {}}
+          xs={false}
+        >
+          <Styled(Component)
+            alignSelf="auto"
+            className=""
+            columnDivisions={12}
+            component="div"
+            debug={true}
+            flex={false}
+            gutter={0}
+            lg={false}
+            md={false}
+            minWidth={false}
+            order={0}
+            sm={false}
+            style={Object {}}
+            xs={false}
+          >
+            <Component
+              alignSelf="auto"
+              className="c1"
+              columnDivisions={12}
+              component="div"
+              debug={true}
+              flex={false}
+              gutter={0}
+              lg={false}
+              md={false}
+              minWidth={false}
+              order={0}
+              sm={false}
+              style={Object {}}
+              xs={false}
+            >
+              <div
+                className="c1"
+                style={Object {}}
+              />
+            </Component>
+          </Styled(Component)>
+        </Col>
+      </div>
+    </Component>
+  </Styled(Component)>
+</Row>
 `;
 
 exports[`Row it mounts Row with props 1`] = `

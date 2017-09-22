@@ -27,12 +27,10 @@ describe('Row', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('it mounts Row with debug prop', () => {
-    const tree = renderer.create(<Row
-      debug
-    />).toJSON();
+  test('it mounts Row and passes with debug prop to Col', () => {
+    const wrapper = mount(<Row debug><Col /></Row>);
 
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('it mounts Row with shortcut props', () => {
