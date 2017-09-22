@@ -1,0 +1,800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row it mounts <Row /> 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={false}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
+  style={Object {}}
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={false}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={false}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      />
+    </Component>
+  </Styled(Component)>
+</Row>
+`;
+
+exports[`Row it mounts <Row component="span" /> 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component="span"
+  debug={false}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
+  style={Object {}}
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component="span"
+    debug={false}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component="span"
+      debug={false}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <span
+        className="c0"
+        style={Object {}}
+      />
+    </Component>
+  </Styled(Component)>
+</Row>
+`;
+
+exports[`Row it mounts Row with debug prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  border: 1px solid red;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Row it mounts Row with props 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding: 1em;
+  height: 100px;
+}
+
+<div
+  className="rick-morty c0"
+  style={
+    Object {
+      "color": "purple",
+    }
+  }
+/>
+`;
+
+exports[`Row it mounts Row with shortcut prop fill and overrides height if set 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 10px;
+  height: 100%;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Row it mounts Row with shortcut prop padding and overrides padding<direction> if set 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding: 0 1px 2px 0;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Row it mounts Row with shortcut props 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 100%;
+}
+
+<div
+  className="c0"
+  style={Object {}}
+/>
+`;
+
+exports[`Row it overrides the default component as a component 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component={[Function]}
+  debug={false}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
+  style={Object {}}
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component={[Function]}
+    debug={false}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component={[Function]}
+      debug={false}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <Faux
+        className="c0"
+        style={Object {}}
+      >
+        <div />
+      </Faux>
+    </Component>
+  </Styled(Component)>
+</Row>
+`;
+
+exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={false}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
+  style={Object {}}
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={false}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={false}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      >
+        <section
+          key=".0"
+        />
+      </div>
+    </Component>
+  </Styled(Component)>
+</Row>
+`;
+
+exports[`Row it passes props down to a child that is a <Col /> 1`] = `
+.c1 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+<Row
+  alignContent="stretch"
+  alignItems="stretch"
+  center={false}
+  className=""
+  columnDivisions={12}
+  component="div"
+  debug={false}
+  direction="row"
+  fill={false}
+  gutter={0}
+  height=""
+  justifyContent="flex-start"
+  minColWidths={false}
+  padding=""
+  paddingBottom=""
+  paddingLeft=""
+  paddingRight=""
+  paddingTop=""
+  style={Object {}}
+  wrap="wrap"
+>
+  <Styled(Component)
+    alignContent="stretch"
+    alignItems="stretch"
+    center={false}
+    className=""
+    columnDivisions={12}
+    component="div"
+    debug={false}
+    direction="row"
+    fill={false}
+    gutter={0}
+    height=""
+    justifyContent="flex-start"
+    minColWidths={false}
+    padding=""
+    paddingBottom=""
+    paddingLeft=""
+    paddingRight=""
+    paddingTop=""
+    style={Object {}}
+    wrap="wrap"
+  >
+    <Component
+      alignContent="stretch"
+      alignItems="stretch"
+      center={false}
+      className="c0"
+      columnDivisions={12}
+      component="div"
+      debug={false}
+      direction="row"
+      fill={false}
+      gutter={0}
+      height=""
+      justifyContent="flex-start"
+      minColWidths={false}
+      padding=""
+      paddingBottom=""
+      paddingLeft=""
+      paddingRight=""
+      paddingTop=""
+      style={Object {}}
+      wrap="wrap"
+    >
+      <div
+        className="c0"
+        style={Object {}}
+      >
+        <Col
+          alignSelf="auto"
+          className=""
+          columnDivisions={12}
+          component="div"
+          debug={false}
+          flex={false}
+          gutter={0}
+          key=".0"
+          lg={false}
+          md={false}
+          minWidth={false}
+          order={0}
+          sm={false}
+          style={Object {}}
+          xs={false}
+        >
+          <Styled(Component)
+            alignSelf="auto"
+            className=""
+            columnDivisions={12}
+            component="div"
+            debug={false}
+            flex={false}
+            gutter={0}
+            lg={false}
+            md={false}
+            minWidth={false}
+            order={0}
+            sm={false}
+            style={Object {}}
+            xs={false}
+          >
+            <Component
+              alignSelf="auto"
+              className="c1"
+              columnDivisions={12}
+              component="div"
+              debug={false}
+              flex={false}
+              gutter={0}
+              lg={false}
+              md={false}
+              minWidth={false}
+              order={0}
+              sm={false}
+              style={Object {}}
+              xs={false}
+            >
+              <div
+                className="c1"
+                style={Object {}}
+              />
+            </Component>
+          </Styled(Component)>
+        </Col>
+      </div>
+    </Component>
+  </Styled(Component)>
+</Row>
+`;

@@ -1,22 +1,37 @@
-/* global describe, it, before */
+import React from 'react';
+import renderer from 'react-test-renderer';
+import 'jest-styled-components';
+import { mount } from 'enzyme';
+import Container from './Container';
 
-import chai from 'chai';
-import { Container } from '../../dist/react-flexybox.js';
+describe('Container', () => {
+  test('it mounts <Container />', () => {
+    const wrapper = mount(<Container />);
 
-chai.expect();
-
-const expect = chai.expect;
-
-let lib;
-
-describe('Given an instance of Container', () => {
-  before(() => {
-    lib = new Container();
+    expect(wrapper).toMatchSnapshot();
   });
-  describe('when I need the name', () => {
-    it('should return the name', () => {
-      expect(lib.name).to.be.equal('Container');
-    });
+
+  test('it mounts <Container fluid />', () => {
+    const tree = renderer.create(<Container
+      fluid
+      className="rick-morty"
+      style={{ color: 'purple' }}
+    />
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('it mounts <Container component="span" />', () => {
+    const wrapper = mount(<Container component="span" />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('it overrides the default component as a component', () => {
+    const Faux = () => <div />;
+    const wrapper = mount(<Container component={Faux} />);
+
+    expect(wrapper).toMatchSnapshot();
   });
 });
-

@@ -171,7 +171,7 @@ Col.propTypes = {
 
 Col.defaultProps = {
   alignSelf: 'auto',
-  children: null,
+  children: [],
   order: 0,
   minWidth: false,
   className: '',

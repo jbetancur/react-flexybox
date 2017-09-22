@@ -1,14 +1,14 @@
 {
   "name": "react-flexybox",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "React CSS Flexbox Components",
   "main": "dist/react-flexybox.js",
   "scripts": {
     "build": "webpack --env build",
     "build-all": "webpack --env build && webpack --env dev",
     "dev": "webpack --progress --colors --watch --env dev",
-    "test": "mocha --compilers js:babel-core/register --colors ./src/**/*.test.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./src/**/*.test.js"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -22,15 +22,19 @@
     "babel-preset-es2015": "6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "chai": "^4.1.2",
-    "eslint": "^4.7.1",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^2.0.0",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
-    "mocha": "^3.5.3",
+    "jest": "^21.1.0",
+    "jest-styled-components": "^4.6.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "webpack": "^3.6.0",
     "yargs": "^8.0.2"
   },
@@ -44,13 +48,15 @@
     "flex",
     "flexbox",
     "react",
-    "react flex box",
     "flex box",
     "flex box layout",
     "flex layout",
     "react flexybox",
     "react-flexbox",
-    "css flex"
+    "react flexbox",
+    "react flex box",
+    "css flex",
+    "react flexbox layout"
   ],
   "author": "John Betancur",
   "license": "MIT",
@@ -126,5 +132,10 @@
         }
       }
     }
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
