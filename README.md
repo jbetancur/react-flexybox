@@ -1,11 +1,12 @@
 # React Flexy Box
 
-React flexy box is a simple to use flexbox system for your React project based on the scss library https://github.com/jbetancur/flexybox. If you've used the bootstrap layout system, then react-flexybox should already be somewhat familiar.
+React flexy box is a simple to use flexbox system for your React project based on the original [flexybox library](https://github.com/jbetancur/flexybox)
+
+If you've used the bootstrap layout system, then react-flexybox should be relatively familiar.
 
 * Straight forward and familiar API for controlling your layout
-* lightweight when minimized ~29kb
-* built with styled-components - no need to add loaders for css/scss
-* easily override flex item widths using minWidthCols or minWidth
+* lightweight when minimized ~30kb
+* built with [styled-components](https://github.com/styled-components/styled-components) - no css/scss means no need to add special loaders/config
 
 ## Installation
 
@@ -141,10 +142,6 @@ const {
 } = ReactFlexyBox;
 ```
 
-## Feature Roadmap
-* offsets
-* Live Demo & Docs (in addition to the codepen)
-
 ## Supported Browsers (CSS)
 Flexy Box CSS is tested on the following browsers, but it will be up to you to set your autoprefixing.
 
@@ -156,8 +153,8 @@ Flexy Box CSS is tested on the following browsers, but it will be up to you to s
 * iOS *
 
 # Contributing
-* The files under the `dev` folder are the ones that should be distributed.*
-* install yarn `npm install yarn jest -g`
+* install yarn and jest `npm install yarn jest -g`
+* run `yarn build-all` to generate dist
 
 ## Scripts
 
@@ -167,6 +164,9 @@ Flexy Box CSS is tested on the following browsers, but it will be up to you to s
 * `yarn test` - runs the tests
 * `yarn test:watch` - same as above but in a watch mode
 
-## Inspiration
+# Built with react-flexybox
+* [Galactic Fog's Gestalt Platform](http://www.galacticfog.com/)
+
+# Inspiration
 * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 * https://v4-alpha.getbootstrap.com/
