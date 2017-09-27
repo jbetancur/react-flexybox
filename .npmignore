@@ -1,0 +1,15 @@
+demo
+node_modules
+*.DS_STORE
+.sass-cache
+.jest-cache
+*.log
+.babelrc
+.eslintrc
+.scss-lint.yml
+.gitignore
+.github
+.editorconfig
+.nvmrc
+.npmignore
+*__tests__*
