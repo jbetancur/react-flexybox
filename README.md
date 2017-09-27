@@ -91,73 +91,40 @@ Flex Items
 ## Basic Usage
 ```
 import { Container, Row, Col } from 'react-flexybox';
-
-// sets Cols to both 50% of the page
-<Container>
-  <Row>
-    <Col flex={6}>
-      hello1!
-    </Col>
-    <Col flex={6}>
-      hello2!
-    </Col>
-  </Row>
-</Container>
-
-// sets Cols to both 50% of the page except on xs where they should be 100%
-<Container>
-  <Row>
-    <Col flex={6} xs={12}>
-      hello1!
-    </Col>
-    <Col flex={6} xs={12}>
-      hello2!
-    </Col>
-  </Row>
-</Container>
-
-// adds a gutter to all flex items
-<Container>
-  <Row gutter={3}>
-    <Col flex={6} xs={12}>
-      hello1!
-    </Col>
-    <Col flex={6} xs={12}>
-      hello2!
-    </Col>
-  </Row>
-</Container>
 ```
 
-## CDN Hosted
-* https://react-flexybox.netlify.com/react-flexybox.js
-* https://react-flexybox.netlify.com/react-flexybox.min.js
-
-### Usage (UMD)
+### UMD Usage
 ```
+...
+<head>
+  <link rel="stylesheet" href="https://react-flexybox.netlify.com/react-flexybox.min.js">
+</head>
+...
+
+// ES6
 const {
   Container,
   Row,
   Col,
 } = ReactFlexyBox;
+
+//ES6
+var Container = ReactFlexyBox.Container;
+var Row = ReactFlexyBox.Row;
+var Col = ReactFlexyBox.Col;
+
 ```
 
-## Supported Browsers (CSS)
-Flexy Box CSS is tested on the following browsers, but it will be up to you to set your autoprefixing.
+## Supported Browsers
+react-flexybox is supports on browsers that support flex. It will be up to you to set your autoprefixing appropriatly especially if you use IE 11
 
-* Chrome *
-* Firefox *
-* Safari (flex wrap does not currently work in safari due to webkit bug)*
-* Edge *
-* IE 11
-* iOS *
+[Supported Browsers](https://caniuse.com/#search=flex)
 
 # Contributing
 * install yarn and jest `npm install yarn jest -g`
 * run `yarn build-all` to generate dist
 
 ## Scripts
-
 * `yarn build` - produces production version of your library under the `dist` folder
 * `yarn build-all` - produces production & dev version of your library under the `dist` folder
 * `yarn dev` - produces development version of react-flexybox and runs a watcher
