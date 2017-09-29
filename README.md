@@ -8,6 +8,9 @@ If you've used the bootstrap layout system, then react-flexybox should be relati
 * lightweight when minimized ~30kb
 * built with [styled-components](https://github.com/styled-components/styled-components) - no css/scss means no need to add special loaders/config
 
+## Live Demo
+https://react-flexybox-demo.netlify.com/
+
 ## Installation
 
 dependencies: react 15+, styled-compoonents 2+
@@ -20,9 +23,6 @@ or
 ```
 yarn add react-flexy-box
 ```
-
-## Live Demo
-https://codepen.io/johnnyazee/pen/prqREK/
 
 ## API
 ### `<Container />`
