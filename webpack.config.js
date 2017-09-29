@@ -46,6 +46,12 @@ const config = {
       commonjs: 'react',
       amd: 'react',
     },
+    'prop-types': {
+      root: 'PropTypes',
+      commonjs2: 'prop-types',
+      commonjs: 'prop-typess',
+      amd: 'prop-types',
+    },
     'styled-components': {
       root: 'styled',
       commonjs2: 'styled-components',
