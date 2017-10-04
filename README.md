@@ -7,13 +7,14 @@ If you've used the bootstrap layout system, then react-flexybox should be relati
 * Straight forward and familiar API for controlling your layout
 * lightweight when minimized ~20kb
 * built with [styled-components](https://github.com/styled-components/styled-components) - no css/scss means no need to add special loaders/config
+* based off actual uses cases in production apps
 
 ## Live Demo
 https://react-flexybox-demo.netlify.com/
 
 ## Installation
 
-dependencies: react 15+, styled-compoonents 2+
+dependencies: react 15+, styled-components 2+
 
 ```
 npm install react-flexybox
@@ -108,7 +109,7 @@ const {
   Col,
 } = ReactFlexyBox;
 
-//ES6
+//ES Old School
 var Container = ReactFlexyBox.Container;
 var Row = ReactFlexyBox.Row;
 var Col = ReactFlexyBox.Col;
@@ -121,8 +122,9 @@ react-flexybox is supports on browsers that support flex. It will be up to you t
 [Supported Browsers](https://caniuse.com/#search=flex)
 
 # Contributing
-* install yarn and jest `npm install yarn jest -g`
-* run `yarn build-all` to generate dist
+* `npm install yarn jest -g`
+* `yarn build-all` to generate dist
+* `yarn build-demo` to generate/update demo
 
 ## Scripts
 * `yarn build` - produces production version of your library under the `dist` folder
@@ -130,6 +132,7 @@ react-flexybox is supports on browsers that support flex. It will be up to you t
 * `yarn dev` - produces development version of react-flexybox and runs a watcher
 * `yarn test` - runs the tests
 * `yarn test:watch` - same as above but in a watch mode
+* `yarn demo:build` - builds the demo
 
 # Built with react-flexybox
 * [Galactic Fog's Gestalt Platform](http://www.galacticfog.com/)
