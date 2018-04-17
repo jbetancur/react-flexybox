@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("react"), require("styled-components"), require("prop-types"));
+		module.exports = factory(require("prop-types"), require("react"), require("styled-components"));
 	else if(typeof define === 'function' && define.amd)
-		define("ReactFlexyBox", ["react", "styled-components", "prop-types"], factory);
+		define("ReactFlexyBox", ["prop-types", "react", "styled-components"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactFlexyBox"] = factory(require("react"), require("styled-components"), require("prop-typess"));
+		exports["ReactFlexyBox"] = factory(require("prop-typess"), require("react"), require("styled-components"));
 	else
-		root["ReactFlexyBox"] = factory(root["React"], root["styled"], root["PropTypes"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_0__, __WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__) {
+		root["ReactFlexyBox"] = factory(root["PropTypes"], root["React"], root["styled"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_prop_types__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_styled_components__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,6 +54,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -69,470 +74,18 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createComponent = undefined;
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _lodash = __webpack_require__(8);
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-/**
- * createComponent
- * @param {String} component
- * @param {Array} propsToOmit
- */
-var createComponent = function createComponent() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$component = _ref.component,
-      component = _ref$component === undefined ? 'div' : _ref$component,
-      _ref$propsToOmit = _ref.propsToOmit,
-      propsToOmit = _ref$propsToOmit === undefined ? [] : _ref$propsToOmit;
-
-  return function (
-  // eslint-disable-next-line react/prop-types
-  _ref2) {
-    var children = _ref2.children,
-        otherProps = _objectWithoutProperties(_ref2, ['children']);
-
-    var props = (0, _lodash2.default)(otherProps, propsToOmit);
-    var tag = otherProps.component || component;
-
-    return _react2.default.createElement(tag, props, children);
-  };
-};
-exports.createComponent = createComponent;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.genWidth = exports.fluid = exports.media = undefined;
-
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    '], ['\n    ', '\n    ']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    ']),
-    _templateObject6 = _taggedTemplateLiteral(['\n    @media (min-width: 34em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 34em) {\n    ', '\n    }\n    ']),
-    _templateObject7 = _taggedTemplateLiteral(['\n    @media (min-width: 48em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 48em) {\n    ', '\n    }\n    ']),
-    _templateObject8 = _taggedTemplateLiteral(['\n    @media (min-width: 62em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 62em) {\n    ', '\n    }\n    ']),
-    _templateObject9 = _taggedTemplateLiteral(['\n    @media (min-width: 75em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 75em) {\n    ', '\n    }\n    ']);
-
-var _styledComponents = __webpack_require__(1);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var media = exports.media = {
-  flex: function flex() {
-    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
-  },
-  xs: function xs() {
-    return (0, _styledComponents.css)(_templateObject2, _styledComponents.css.apply(undefined, arguments));
-  },
-  sm: function sm() {
-    return (0, _styledComponents.css)(_templateObject3, _styledComponents.css.apply(undefined, arguments));
-  },
-  md: function md() {
-    return (0, _styledComponents.css)(_templateObject4, _styledComponents.css.apply(undefined, arguments));
-  },
-  lg: function lg() {
-    return (0, _styledComponents.css)(_templateObject5, _styledComponents.css.apply(undefined, arguments));
-  }
-};
-
-var fluid = exports.fluid = {
-  xs: function xs() {
-    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
-  },
-  greaterXS: function greaterXS() {
-    return (0, _styledComponents.css)(_templateObject6, _styledComponents.css.apply(undefined, arguments));
-  },
-  greaterSM: function greaterSM() {
-    return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
-  },
-  greaterMD: function greaterMD() {
-    return (0, _styledComponents.css)(_templateObject8, _styledComponents.css.apply(undefined, arguments));
-  },
-  greaterLG: function greaterLG() {
-    return (0, _styledComponents.css)(_templateObject9, _styledComponents.css.apply(undefined, arguments));
-  }
-};
-
-var genWidth = exports.genWidth = function genWidth(prop, divisions, gutter) {
-  return 'calc(' + prop / divisions * 100 + '% - ' + gutter * 2 + 'px)';
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _styled = __webpack_require__(3);
-
-var _media = __webpack_require__(4);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var agnosticComponent = (0, _styled.createComponent)({
-  propsToOmit: ['alignSelf', 'flex', 'xs', 'sm', 'md', 'lg', 'gutter', 'columnDivisions', 'order', 'minWidth', 'debug', 'component']
-});
-
-var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
-  return props.gutter;
-}, function (props) {
-  return props.order;
-}, function (props) {
-  return props.alignSelf;
-}, function (props) {
-  return props.debug && 'border: 1px solid green';
-}, function (props) {
-  return props.flex && _media.media.flex(_templateObject2, (0, _media.genWidth)(props.flex, props.columnDivisions, props.gutter));
-}, function (props) {
-  return !Number.isInteger(props.flex) && props.flex && 'flex: 1';
-}, function (props) {
-  return Number.isInteger(props.xs) && _media.media.xs(_templateObject2, (0, _media.genWidth)(props.xs, props.columnDivisions, props.gutter));
-}, function (props) {
-  return Number.isInteger(props.sm) && _media.media.sm(_templateObject2, (0, _media.genWidth)(props.sm, props.columnDivisions, props.gutter));
-}, function (props) {
-  return Number.isInteger(props.md) && _media.media.md(_templateObject2, (0, _media.genWidth)(props.md, props.columnDivisions, props.gutter));
-}, function (props) {
-  return Number.isInteger(props.lg) && _media.media.lg(_templateObject2, (0, _media.genWidth)(props.lg, props.columnDivisions, props.gutter));
-}, function (props) {
-  return props.minWidth && 'min-width: ' + props.minWidth + 'px';
-});
-
-var Col = function Col(props) {
-  return _react2.default.createElement(
-    ColStyle,
-    _extends({
-      alignSelf: props.alignSelf,
-      flex: props.flex,
-      xs: props.xs,
-      sm: props.sm,
-      md: props.md,
-      lg: props.lg,
-      gutter: props.gutter,
-      columnDivisions: props.columnDivisions,
-      order: props.order,
-      className: props.className,
-      style: props.style,
-      minWidth: props.minWidth,
-      debug: props.debug,
-      component: props.component
-    }, props),
-    props.children
-  );
-};
-
-Col.propTypes = {
-  /**
-   * react/html elements
-   */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
-
-  /**
-   * aligns the whole structure according to its value and has no effect when items are in a single line
-   */
-  alignSelf: _propTypes2.default.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
-
-  /**
-   * inherited from `Row`
-   */
-  gutter: _propTypes2.default.number.isRequired,
-
-  /**
-   * inherited from `Row`
-   */
-  columnDivisions: _propTypes2.default.number.isRequired,
-
-  /**
-   * The component to render the `Col` as
-   */
-  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
-
-  /**
-   * inherited from `Row`
-   */
-  debug: _propTypes2.default.bool,
-
-  /**
-   * allows overriding the `Col` item order
-   */
-  order: _propTypes2.default.number,
-
-  /**
-   * sets the min-width on a `Col` item - this overrides `Row` `minColWidths` for a specific `Col`
-   */
-  minWidth: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
-
-  /**
-   * overide the `className` on the root element of Row
-   */
-  className: _propTypes2.default.string,
-
-  /**
-   * override the `style` on the root element of Row
-   */
-  style: _propTypes2.default.object,
-
-  /**
-   * sets the default flex-basis and min-width percentage of the flex-item
-   */
-  flex: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
-
-  /**
-   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 0-599-px
-   */
-  xs: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
-
-  /**
-   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 600-959px
-   */
-  sm: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
-
-  /**
-   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 960-1280px
-   */
-  md: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
-
-  /**
-   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 1280px or greater
-   */
-  lg: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
-};
-
-Col.defaultProps = {
-  alignSelf: 'auto',
-  children: [],
-  order: 0,
-  minWidth: false,
-  className: '',
-  style: {},
-  component: 'div',
-  flex: false,
-  xs: false,
-  sm: false,
-  md: false,
-  lg: false,
-  gutter: 0,
-  columnDivisions: 12,
-  debug: false
-};
-
-exports.default = Col;
-module.exports = exports['default'];
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Col = exports.Row = exports.Container = undefined;
-
-var _Container = __webpack_require__(7);
-
-var _Container2 = _interopRequireDefault(_Container);
-
-var _Row = __webpack_require__(10);
-
-var _Row2 = _interopRequireDefault(_Row);
-
-var _Col = __webpack_require__(5);
-
-var _Col2 = _interopRequireDefault(_Col);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Container = _Container2.default;
-exports.Row = _Row2.default;
-exports.Col = _Col2.default;
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _templateObject = _taggedTemplateLiteral(['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n'], ['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    max-width: 34rem;\n  '], ['\n    max-width: 34rem;\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n    max-width: 45rem;\n  '], ['\n    max-width: 45rem;\n  ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n    max-width: 60rem;\n  '], ['\n    max-width: 60rem;\n  ']),
-    _templateObject6 = _taggedTemplateLiteral(['\n    max-width: 72.25rem;\n  '], ['\n    max-width: 72.25rem;\n  ']);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(1);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _styled = __webpack_require__(3);
-
-var _media = __webpack_require__(4);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var agnosticComponent = (0, _styled.createComponent)({
-  propsToOmit: ['wrap', 'component', 'fluid']
-});
-
-var ContainerStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
-  return props.fluid && 'width: 100%;';
-}, function (props) {
-  return !props.fluid && _media.fluid.xs(_templateObject2);
-}, function (props) {
-  return !props.fluid && _media.fluid.greaterXS(_templateObject3);
-}, function (props) {
-  return !props.fluid && _media.fluid.greaterSM(_templateObject4);
-}, function (props) {
-  return !props.fluid && _media.fluid.greaterMD(_templateObject5);
-}, function (props) {
-  return !props.fluid && _media.fluid.greaterLG(_templateObject6);
-});
-
-var Container = function Container(props) {
-  return _react2.default.createElement(
-    ContainerStyle,
-    _extends({
-      fluid: props.fluid,
-      className: props.className,
-      style: props.style,
-      component: props.component
-    }, props),
-    props.children
-  );
-};
-
-Container.propTypes = {
-  /**
-   * react/html elements
-   */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
-
-  /**
-   * The component to render the `Container` as.
-   */
-  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
-
-  /**
-   * full width or controlled width layout
-   */
-  fluid: _propTypes2.default.bool,
-
-  /**
-   * override the `className` on the root element of Row
-   */
-  className: _propTypes2.default.string,
-
-  /**
-   * overide the `style` on the root element of Row
-   */
-  style: _propTypes2.default.object
-};
-
-Container.defaultProps = {
-  children: [],
-  fluid: false,
-  className: '',
-  style: {},
-  component: 'div'
-};
-
-exports.default = Container;
-module.exports = exports['default'];
-
-/***/ }),
-/* 8 */
+/******/ ({
+
+/***/ "./node_modules/lodash.omit/index.js":
+/*!*******************************************!*\
+  !*** ./node_modules/lodash.omit/index.js ***!
+  \*******************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -2024,10 +1577,15 @@ function stubArray() {
 
 module.exports = omit;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
-/* 9 */
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
 var g;
@@ -2039,11 +1597,10 @@ g = (function() {
 
 try {
 	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
 	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
+	if (typeof window === "object") g = window;
 }
 
 // g can still be undefined, but nothing to do about it...
@@ -2054,7 +1611,316 @@ module.exports = g;
 
 
 /***/ }),
-/* 10 */
+
+/***/ "./src/components/Col.jsx":
+/*!********************************!*\
+  !*** ./src/components/Col.jsx ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
+
+var _media = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var agnosticComponent = (0, _styled.createComponent)({
+  propsToOmit: ['alignSelf', 'flex', 'xs', 'sm', 'md', 'lg', 'gutter', 'columnDivisions', 'order', 'minWidth', 'debug', 'component']
+});
+
+var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
+  return props.gutter;
+}, function (props) {
+  return props.order;
+}, function (props) {
+  return props.alignSelf;
+}, function (props) {
+  return props.debug && 'border: 1px solid green';
+}, function (props) {
+  return props.flex && _media.media.flex(_templateObject2, (0, _media.genWidth)(props.flex, props.columnDivisions, props.gutter));
+}, function (props) {
+  return !Number.isInteger(props.flex) && props.flex && 'flex: 1';
+}, function (props) {
+  return Number.isInteger(props.xs) && _media.media.xs(_templateObject2, (0, _media.genWidth)(props.xs, props.columnDivisions, props.gutter));
+}, function (props) {
+  return Number.isInteger(props.sm) && _media.media.sm(_templateObject2, (0, _media.genWidth)(props.sm, props.columnDivisions, props.gutter));
+}, function (props) {
+  return Number.isInteger(props.md) && _media.media.md(_templateObject2, (0, _media.genWidth)(props.md, props.columnDivisions, props.gutter));
+}, function (props) {
+  return Number.isInteger(props.lg) && _media.media.lg(_templateObject2, (0, _media.genWidth)(props.lg, props.columnDivisions, props.gutter));
+}, function (props) {
+  return props.minWidth && 'min-width: ' + props.minWidth + 'px';
+});
+
+var Col = function Col(props) {
+  return _react2.default.createElement(
+    ColStyle,
+    _extends({
+      alignSelf: props.alignSelf,
+      flex: props.flex,
+      xs: props.xs,
+      sm: props.sm,
+      md: props.md,
+      lg: props.lg,
+      gutter: props.gutter,
+      columnDivisions: props.columnDivisions,
+      order: props.order,
+      className: props.className,
+      style: props.style,
+      minWidth: props.minWidth,
+      debug: props.debug,
+      component: props.component
+    }, props),
+    props.children
+  );
+};
+
+Col.propTypes = {
+  /**
+   * react/html elements
+   */
+  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+
+  /**
+   * aligns the whole structure according to its value and has no effect when items are in a single line
+   */
+  alignSelf: _propTypes2.default.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+
+  /**
+   * inherited from `Row`
+   */
+  gutter: _propTypes2.default.number.isRequired,
+
+  /**
+   * inherited from `Row`
+   */
+  columnDivisions: _propTypes2.default.number.isRequired,
+
+  /**
+   * The component to render the `Col` as
+   */
+  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
+
+  /**
+   * inherited from `Row`
+   */
+  debug: _propTypes2.default.bool,
+
+  /**
+   * allows overriding the `Col` item order
+   */
+  order: _propTypes2.default.number,
+
+  /**
+   * sets the min-width on a `Col` item - this overrides `Row` `minColWidths` for a specific `Col`
+   */
+  minWidth: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * overide the `className` on the root element of Row
+   */
+  className: _propTypes2.default.string,
+
+  /**
+   * override the `style` on the root element of Row
+   */
+  style: _propTypes2.default.object,
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item
+   */
+  flex: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 0-599-px
+   */
+  xs: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 600-959px
+   */
+  sm: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 960-1280px
+   */
+  md: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+
+  /**
+   * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 1280px or greater
+   */
+  lg: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
+};
+
+Col.defaultProps = {
+  alignSelf: 'auto',
+  children: [],
+  order: 0,
+  minWidth: false,
+  className: '',
+  style: {},
+  component: 'div',
+  flex: false,
+  xs: false,
+  sm: false,
+  md: false,
+  lg: false,
+  gutter: 0,
+  columnDivisions: 12,
+  debug: false
+};
+
+exports.default = Col;
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./src/components/Container.jsx":
+/*!**************************************!*\
+  !*** ./src/components/Container.jsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _templateObject = _taggedTemplateLiteral(['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n'], ['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    max-width: 34rem;\n  '], ['\n    max-width: 34rem;\n  ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    max-width: 45rem;\n  '], ['\n    max-width: 45rem;\n  ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n    max-width: 60rem;\n  '], ['\n    max-width: 60rem;\n  ']),
+    _templateObject6 = _taggedTemplateLiteral(['\n    max-width: 72.25rem;\n  '], ['\n    max-width: 72.25rem;\n  ']);
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
+
+var _media = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var agnosticComponent = (0, _styled.createComponent)({
+  propsToOmit: ['wrap', 'component', 'fluid']
+});
+
+var ContainerStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
+  return props.fluid && 'width: 100%;';
+}, function (props) {
+  return !props.fluid && _media.fluid.xs(_templateObject2);
+}, function (props) {
+  return !props.fluid && _media.fluid.greaterXS(_templateObject3);
+}, function (props) {
+  return !props.fluid && _media.fluid.greaterSM(_templateObject4);
+}, function (props) {
+  return !props.fluid && _media.fluid.greaterMD(_templateObject5);
+}, function (props) {
+  return !props.fluid && _media.fluid.greaterLG(_templateObject6);
+});
+
+var Container = function Container(props) {
+  return _react2.default.createElement(
+    ContainerStyle,
+    _extends({
+      fluid: props.fluid,
+      className: props.className,
+      style: props.style,
+      component: props.component
+    }, props),
+    props.children
+  );
+};
+
+Container.propTypes = {
+  /**
+   * react/html elements
+   */
+  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+
+  /**
+   * The component to render the `Container` as.
+   */
+  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
+
+  /**
+   * full width or controlled width layout
+   */
+  fluid: _propTypes2.default.bool,
+
+  /**
+   * override the `className` on the root element of Row
+   */
+  className: _propTypes2.default.string,
+
+  /**
+   * overide the `style` on the root element of Row
+   */
+  style: _propTypes2.default.object
+};
+
+Container.defaultProps = {
+  children: [],
+  fluid: false,
+  className: '',
+  style: {},
+  component: 'div'
+};
+
+exports.default = Container;
+module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./src/components/Row.jsx":
+/*!********************************!*\
+  !*** ./src/components/Row.jsx ***!
+  \********************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2068,21 +1934,21 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n']);
 
-var _react = __webpack_require__(0);
+var _react = __webpack_require__(/*! react */ "react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(2);
+var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styledComponents = __webpack_require__(1);
+var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
-var _styled = __webpack_require__(3);
+var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
 
-var _Col = __webpack_require__(5);
+var _Col = __webpack_require__(/*! ./Col */ "./src/components/Col.jsx");
 
 var _Col2 = _interopRequireDefault(_Col);
 
@@ -2172,6 +2038,11 @@ var Row = function Row(props) {
 };
 
 Row.propTypes = {
+  /**
+   * children
+   */
+  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+
   /**
    * sets the margins for flex items
    */
@@ -2276,6 +2147,7 @@ Row.propTypes = {
 };
 
 Row.defaultProps = {
+  children: [],
   gutter: 0,
   columnDivisions: 12,
   minColWidths: false,
@@ -2301,7 +2173,202 @@ Row.defaultProps = {
 exports.default = Row;
 module.exports = exports['default'];
 
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Col = exports.Row = exports.Container = undefined;
+
+var _Container = __webpack_require__(/*! ./components/Container */ "./src/components/Container.jsx");
+
+var _Container2 = _interopRequireDefault(_Container);
+
+var _Row = __webpack_require__(/*! ./components/Row */ "./src/components/Row.jsx");
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = __webpack_require__(/*! ./components/Col */ "./src/components/Col.jsx");
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Container = _Container2.default;
+exports.Row = _Row2.default;
+exports.Col = _Col2.default;
+
+/***/ }),
+
+/***/ "./src/utils/media.js":
+/*!****************************!*\
+  !*** ./src/utils/media.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.genWidth = exports.fluid = exports.media = undefined;
+
+var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    '], ['\n    ', '\n    ']),
+    _templateObject2 = _taggedTemplateLiteral(['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    ']),
+    _templateObject3 = _taggedTemplateLiteral(['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    ']),
+    _templateObject4 = _taggedTemplateLiteral(['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    ']),
+    _templateObject5 = _taggedTemplateLiteral(['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    ']),
+    _templateObject6 = _taggedTemplateLiteral(['\n    @media (min-width: 34em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 34em) {\n    ', '\n    }\n    ']),
+    _templateObject7 = _taggedTemplateLiteral(['\n    @media (min-width: 48em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 48em) {\n    ', '\n    }\n    ']),
+    _templateObject8 = _taggedTemplateLiteral(['\n    @media (min-width: 62em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 62em) {\n    ', '\n    }\n    ']),
+    _templateObject9 = _taggedTemplateLiteral(['\n    @media (min-width: 75em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 75em) {\n    ', '\n    }\n    ']);
+
+var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var media = exports.media = {
+  flex: function flex() {
+    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
+  },
+  xs: function xs() {
+    return (0, _styledComponents.css)(_templateObject2, _styledComponents.css.apply(undefined, arguments));
+  },
+  sm: function sm() {
+    return (0, _styledComponents.css)(_templateObject3, _styledComponents.css.apply(undefined, arguments));
+  },
+  md: function md() {
+    return (0, _styledComponents.css)(_templateObject4, _styledComponents.css.apply(undefined, arguments));
+  },
+  lg: function lg() {
+    return (0, _styledComponents.css)(_templateObject5, _styledComponents.css.apply(undefined, arguments));
+  }
+};
+
+var fluid = exports.fluid = {
+  xs: function xs() {
+    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
+  },
+  greaterXS: function greaterXS() {
+    return (0, _styledComponents.css)(_templateObject6, _styledComponents.css.apply(undefined, arguments));
+  },
+  greaterSM: function greaterSM() {
+    return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
+  },
+  greaterMD: function greaterMD() {
+    return (0, _styledComponents.css)(_templateObject8, _styledComponents.css.apply(undefined, arguments));
+  },
+  greaterLG: function greaterLG() {
+    return (0, _styledComponents.css)(_templateObject9, _styledComponents.css.apply(undefined, arguments));
+  }
+};
+
+var genWidth = exports.genWidth = function genWidth(prop, divisions, gutter) {
+  return 'calc(' + prop / divisions * 100 + '% - ' + gutter * 2 + 'px)';
+};
+
+/***/ }),
+
+/***/ "./src/utils/styled.js":
+/*!*****************************!*\
+  !*** ./src/utils/styled.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createComponent = undefined;
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _lodash = __webpack_require__(/*! lodash.omit */ "./node_modules/lodash.omit/index.js");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+/**
+ * createComponent
+ * @param {String} component
+ * @param {Array} propsToOmit
+ */
+var createComponent = function createComponent() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$component = _ref.component,
+      component = _ref$component === undefined ? 'div' : _ref$component,
+      _ref$propsToOmit = _ref.propsToOmit,
+      propsToOmit = _ref$propsToOmit === undefined ? [] : _ref$propsToOmit;
+
+  return function (
+  // eslint-disable-next-line react/prop-types
+  _ref2) {
+    var children = _ref2.children,
+        otherProps = _objectWithoutProperties(_ref2, ['children']);
+
+    var props = (0, _lodash2.default)(otherProps, propsToOmit);
+    var tag = otherProps.component || component;
+
+    return _react2.default.createElement(tag, props, children);
+  };
+};
+exports.createComponent = createComponent;
+
+/***/ }),
+
+/***/ "prop-types":
+/*!**********************************************************************************************************!*\
+  !*** external {"root":"PropTypes","commonjs2":"prop-types","commonjs":"prop-typess","amd":"prop-types"} ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_prop_types__;
+
+/***/ }),
+
+/***/ "react":
+/*!**************************************************************************************!*\
+  !*** external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"} ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
+
+/***/ }),
+
+/***/ "styled-components":
+/*!***************************************************************************************************************************!*\
+  !*** external {"root":"styled","commonjs2":"styled-components","commonjs":"styled-components","amd":"styled-components"} ***!
+  \***************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_styled_components__;
+
 /***/ })
-/******/ ]);
+
+/******/ });
 });
 //# sourceMappingURL=react-flexybox.js.map
