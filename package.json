@@ -1,44 +1,15 @@
 {
   "name": "react-flexybox",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.js",
   "scripts": {
     "build": "webpack --env build",
-    "build-all": "webpack --env build && webpack --env dev",
+    "build-all": "webpack --env build --mode production && webpack --env dev --mode development",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build:demo": "cd demo && yarn install && node ./scripts/build.js"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-assign": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
-    "enzyme-to-json": "^3.0.1",
-    "eslint": "^4.7.2",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-import-resolver-webpack": "^0.8.3",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.4.0",
-    "jest": "^21.2.1",
-    "jest-styled-components": "^4.6.0",
-    "react-dom": "^16.0.0",
-    "react-test-renderer": "^16.0.0",
-    "webpack": "^3.6.0",
-    "yargs": "^9.0.1"
   },
   "repository": {
     "type": "git",
@@ -66,15 +37,47 @@
     "url": "https://github.com/jbetancur/react-flexybox/issues"
   },
   "homepage": "https://react-flexybox.netlify.com/",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
+    "jest-styled-components": "^5.0.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
+    "styled-components": "^3.2.6",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3",
+    "yargs": "^11.0.0"
+  },
   "dependencies": {
-    "lodash.omit": "^4.5.0",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "styled-components": "^2.2.0"
+    "html-webpack-plugin": "^3.2.0",
+    "lodash.omit": "^4.5.0"
   },
   "peerDependencies": {
     "react": "^15.5.0 || ^16.0.0",
-    "styled-components": "^2.0.0"
+    "styled-components": "^2.0.0 || ^3.0.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -135,7 +138,7 @@
     }
   },
   "jest": {
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!**/node_modules/**",

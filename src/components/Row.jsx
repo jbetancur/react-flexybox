@@ -94,6 +94,14 @@ const Row = (props) => {
 
 Row.propTypes = {
   /**
+   * children
+   */
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+
+  /**
    * sets the margins for flex items
    */
   gutter: PropTypes.number,
@@ -197,6 +205,7 @@ Row.propTypes = {
 };
 
 Row.defaultProps = {
+  children: [],
   gutter: 0,
   columnDivisions: 12,
   minColWidths: false,
