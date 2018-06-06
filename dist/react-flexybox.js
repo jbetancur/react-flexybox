@@ -1628,7 +1628,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  // if flex is just true then set flex to auto\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  // Allows min-width to be overridden\n  ', ';\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  /* if flex is just true then set flex to auto */\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  /* Allows min-width to be overridden */\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  /* if flex is just true then set flex to auto */\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  /* Allows min-width to be overridden */\n  ', ';\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
 
 var _react = __webpack_require__(/*! react */ "react");
@@ -2098,7 +2098,7 @@ Row.propTypes = {
   /**
    * aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
    */
-  alignItems: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
+  alignItems: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch', 'baseline']),
 
   /**
    * enables bounding boxes for `Row` and `Col` to help debug layout issues
