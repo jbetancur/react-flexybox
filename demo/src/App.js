@@ -23,14 +23,13 @@ class App extends Component {
           </Col>
         </Row>
 
-        <Container>
-          <FlexExample />
-          <FlexResponsiveExample />
-          <FlexLayoutExample />
-          <FlexAlignmentExample />
-          <ContainerExample />
-          <DebugExample />
-        </Container>
+        <FlexExample />
+        <FlexResponsiveExample />
+        <FlexLayoutExample />
+        <FlexAlignmentExample />
+        <ContainerExample />
+        <DebugExample />
+
       </Container>
     );
   }
