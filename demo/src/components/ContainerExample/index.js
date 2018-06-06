@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-flexybox';
 import Markdown from '../Markdown';
 import code from './code.md';
+import codeFluid from './codeFluid.md';
 
 const ContainerExample = props => (
   <div>
@@ -17,6 +18,12 @@ const ContainerExample = props => (
         <Col flex={6} className="demo-item" />
         <Col flex={6} className="demo-item" />
       </Row>
+
+      <Row>
+        <Col flex={12}>
+          <Markdown markdown={code} />
+        </Col>
+      </Row>
     </Container>
 
     <p>
@@ -30,11 +37,13 @@ const ContainerExample = props => (
         <Col flex={6} className="demo-item" />
         <Col flex={6} className="demo-item" />
       </Row>
+    </Container>
 
-      <Row>
-        <Col flex={12}>
-          <Markdown markdown={code} />
-        </Col>
+    <Container>
+    <Row>
+      <Col flex={12}>
+        <Markdown markdown={codeFluid} />
+      </Col>
       </Row>
     </Container>
   </div>
