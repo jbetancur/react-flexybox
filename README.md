@@ -48,7 +48,7 @@ Row wraps Cols
 | direction      	| string  	| `row \| row-reverse \| column \| column-reverse`                                  	| row        	|
 | justifyContent 	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| space-evenly` | flex-start 	| justityContent aligns the items inside a flex container along the x axis
 | alignContent   	| string  	| `flex-start \| flex-end \| center \| baseline \| stretch`                          	| stretch    	| alignContent aligns the whole structure according to its value and has no effect when items are in a single line
-| alignItems     	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| stretch`      | stretch    	| alignItems aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
+| alignItems     	| string  	| `flex-start \| flex-end \| center \| space-between \| space-around \| stretch \| baseline`      | stretch    	| alignItems aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
 | className       | string 	  |        	                                                                            |         	  | set the className on the Row Element                                          |
 | style 	        | object 	  |        	                                                                            |         	  | set the style on the Row Element                                              |
 | debug           | boolean   |                                                                                     | false       | adds bounding boxes to help debug layout issues                               |
