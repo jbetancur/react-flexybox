@@ -156,7 +156,7 @@ Row.propTypes = {
   /**
    * aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
    */
-  alignItems: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch']),
+  alignItems: PropTypes.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch', 'baseline']),
 
   /**
    * enables bounding boxes for `Row` and `Col` to help debug layout issues

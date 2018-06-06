@@ -35,7 +35,7 @@ const ColStyle = styled(agnosticComponent)`
     min-width: var(--width);
   `}
 
-  // if flex is just true then set flex to auto
+  /* if flex is just true then set flex to auto */
   ${props => !Number.isInteger(props.flex) && props.flex && 'flex: 1'};
 
   ${props => Number.isInteger(props.xs) && media.xs`
@@ -62,7 +62,7 @@ const ColStyle = styled(agnosticComponent)`
     min-width: var(--width);
   `}
 
-  // Allows min-width to be overridden
+  /* Allows min-width to be overridden */
   ${props => props.minWidth && `min-width: ${props.minWidth}px`};
 `;
 
