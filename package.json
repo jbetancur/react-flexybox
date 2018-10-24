@@ -1,8 +1,11 @@
 {
   "name": "react-flexybox",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "React Flexbox Components",
-  "main": "dist/react-flexybox.js",
+  "main": "dist/react-flexybox.min.js",
+  "engines": {
+    "node": ">=8.11.3"
+  },
   "scripts": {
     "build": "webpack --env build --mode production",
     "build-all": "webpack --env build --mode production && webpack --env dev --mode development",

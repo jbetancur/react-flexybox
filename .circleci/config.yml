@@ -1,0 +1,36 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.12.0
+    steps:
+      - checkout
+      - run:
+          name: install-jest
+          command: 'sudo npm install -g jest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-deps
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
+      - run:
+          # name: build
+          command: npm run build
+      # - run: # run coverage report
+      #     name: code-coverage
+      #     command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      # - store_artifacts:
+      #     path: test-results.xml
+      #     prefix: tests
+      # - store_artifacts:
+      #     path: coverage
+      #     prefix: coverage
+      # - store_test_results:
+      #     path: test-results.xml
