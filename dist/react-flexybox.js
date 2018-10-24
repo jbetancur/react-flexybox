@@ -46,17 +46,32 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -1616,46 +1631,92 @@ module.exports = g;
 /*!********************************!*\
   !*** ./src/components/Col.jsx ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
+/* harmony import */ var _utils_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    --width: ", ";\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    --width: ", ";\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    --width: ", ";\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    --width: ", ";\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    --width: ", ";\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  margin: ", "px;\n  max-height: 100%;\n  order: ", ";\n  align-self: ", ";\n  ", ";\n\n  ", "\n\n  /* if flex is just true then set flex to auto */\n  ", ";\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  /* Allows min-width to be overridden */\n  ", ";\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  /* if flex is just true then set flex to auto */\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  /* Allows min-width to be overridden */\n  ', ';\n'], ['\n  box-sizing: border-box;\n  margin: ', 'px;\n  max-height: 100%;\n  order: ', ';\n  align-self: ', ';\n  ', ';\n\n  ', '\n\n  /* if flex is just true then set flex to auto */\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  /* Allows min-width to be overridden */\n  ', ';\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  '], ['\n    --width: ', ';\n    flex: 0 1 var(--width);\n    min-width: var(--width);\n  ']);
 
-var _react = __webpack_require__(/*! react */ "react");
 
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
-
-var _media = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var agnosticComponent = (0, _styled.createComponent)({
+var agnosticComponent = Object(_utils_styled__WEBPACK_IMPORTED_MODULE_3__["createComponent"])({
   propsToOmit: ['alignSelf', 'flex', 'xs', 'sm', 'md', 'lg', 'gutter', 'columnDivisions', 'order', 'minWidth', 'debug', 'component']
 });
-
-var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
+var ColStyle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(agnosticComponent)(_templateObject(), function (props) {
   return props.gutter;
 }, function (props) {
   return props.order;
@@ -1664,121 +1725,116 @@ var ColStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObjec
 }, function (props) {
   return props.debug && 'border: 1px solid green';
 }, function (props) {
-  return props.flex && _media.media.flex(_templateObject2, (0, _media.genWidth)(props.flex, props.columnDivisions, props.gutter));
+  return props.flex && _utils_media__WEBPACK_IMPORTED_MODULE_4__["media"].flex(_templateObject2(), Object(_utils_media__WEBPACK_IMPORTED_MODULE_4__["genWidth"])(props.flex, props.columnDivisions, props.gutter));
 }, function (props) {
   return !Number.isInteger(props.flex) && props.flex && 'flex: 1';
 }, function (props) {
-  return Number.isInteger(props.xs) && _media.media.xs(_templateObject2, (0, _media.genWidth)(props.xs, props.columnDivisions, props.gutter));
+  return Number.isInteger(props.xs) && _utils_media__WEBPACK_IMPORTED_MODULE_4__["media"].xs(_templateObject3(), Object(_utils_media__WEBPACK_IMPORTED_MODULE_4__["genWidth"])(props.xs, props.columnDivisions, props.gutter));
 }, function (props) {
-  return Number.isInteger(props.sm) && _media.media.sm(_templateObject2, (0, _media.genWidth)(props.sm, props.columnDivisions, props.gutter));
+  return Number.isInteger(props.sm) && _utils_media__WEBPACK_IMPORTED_MODULE_4__["media"].sm(_templateObject4(), Object(_utils_media__WEBPACK_IMPORTED_MODULE_4__["genWidth"])(props.sm, props.columnDivisions, props.gutter));
 }, function (props) {
-  return Number.isInteger(props.md) && _media.media.md(_templateObject2, (0, _media.genWidth)(props.md, props.columnDivisions, props.gutter));
+  return Number.isInteger(props.md) && _utils_media__WEBPACK_IMPORTED_MODULE_4__["media"].md(_templateObject5(), Object(_utils_media__WEBPACK_IMPORTED_MODULE_4__["genWidth"])(props.md, props.columnDivisions, props.gutter));
 }, function (props) {
-  return Number.isInteger(props.lg) && _media.media.lg(_templateObject2, (0, _media.genWidth)(props.lg, props.columnDivisions, props.gutter));
+  return Number.isInteger(props.lg) && _utils_media__WEBPACK_IMPORTED_MODULE_4__["media"].lg(_templateObject6(), Object(_utils_media__WEBPACK_IMPORTED_MODULE_4__["genWidth"])(props.lg, props.columnDivisions, props.gutter));
 }, function (props) {
-  return props.minWidth && 'min-width: ' + props.minWidth + 'px';
+  return props.minWidth && "min-width: ".concat(props.minWidth, "px");
 });
 
 var Col = function Col(props) {
-  return _react2.default.createElement(
-    ColStyle,
-    _extends({
-      alignSelf: props.alignSelf,
-      flex: props.flex,
-      xs: props.xs,
-      sm: props.sm,
-      md: props.md,
-      lg: props.lg,
-      gutter: props.gutter,
-      columnDivisions: props.columnDivisions,
-      order: props.order,
-      className: props.className,
-      style: props.style,
-      minWidth: props.minWidth,
-      debug: props.debug,
-      component: props.component
-    }, props),
-    props.children
-  );
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ColStyle, _extends({
+    alignSelf: props.alignSelf,
+    flex: props.flex,
+    xs: props.xs,
+    sm: props.sm,
+    md: props.md,
+    lg: props.lg,
+    gutter: props.gutter,
+    columnDivisions: props.columnDivisions,
+    order: props.order,
+    className: props.className,
+    style: props.style,
+    minWidth: props.minWidth,
+    debug: props.debug,
+    component: props.component
+  }, props), props.children);
 };
 
 Col.propTypes = {
   /**
    * react/html elements
    */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node), prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node]),
 
   /**
    * aligns the whole structure according to its value and has no effect when items are in a single line
    */
-  alignSelf: _propTypes2.default.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+  alignSelf: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
 
   /**
    * inherited from `Row`
    */
-  gutter: _propTypes2.default.number.isRequired,
+  gutter: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
 
   /**
    * inherited from `Row`
    */
-  columnDivisions: _propTypes2.default.number.isRequired,
+  columnDivisions: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number.isRequired,
 
   /**
    * The component to render the `Col` as
    */
-  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
+  component: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]),
 
   /**
    * inherited from `Row`
    */
-  debug: _propTypes2.default.bool,
+  debug: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
 
   /**
    * allows overriding the `Col` item order
    */
-  order: _propTypes2.default.number,
+  order: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
 
   /**
    * sets the min-width on a `Col` item - this overrides `Row` `minColWidths` for a specific `Col`
    */
-  minWidth: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  minWidth: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * overide the `className` on the root element of Row
    */
-  className: _propTypes2.default.string,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * override the `style` on the root element of Row
    */
-  style: _propTypes2.default.object,
+  style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
 
   /**
    * sets the default flex-basis and min-width percentage of the flex-item
    */
-  flex: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  flex: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 0-599-px
    */
-  xs: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  xs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 600-959px
    */
-  sm: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  sm: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 960-1280px
    */
-  md: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  md: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * sets the default flex-basis and min-width percentage of the flex-item when the screen size is 1280px or greater
    */
-  lg: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool])
+  lg: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool])
 };
-
 Col.defaultProps = {
   alignSelf: 'auto',
   children: [],
@@ -1796,9 +1852,7 @@ Col.defaultProps = {
   columnDivisions: 12,
   debug: false
 };
-
-exports.default = Col;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["default"] = (Col);
 
 /***/ }),
 
@@ -1806,103 +1860,140 @@ module.exports = exports['default'];
 /*!**************************************!*\
   !*** ./src/components/Container.jsx ***!
   \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
+/* harmony import */ var _utils_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 72.25rem;\n  "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 60rem;\n  "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 45rem;\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 34rem;\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  margin-right: auto;\n  margin-left: auto;\n  ", ";\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n};\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n'], ['\n  margin-right: auto;\n  margin-left: auto;\n  ', ';\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n\n  ', '\n};\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    width: 100%;\n  '], ['\n    width: 100%;\n  ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    max-width: 34rem;\n  '], ['\n    max-width: 34rem;\n  ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n    max-width: 45rem;\n  '], ['\n    max-width: 45rem;\n  ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n    max-width: 60rem;\n  '], ['\n    max-width: 60rem;\n  ']),
-    _templateObject6 = _taggedTemplateLiteral(['\n    max-width: 72.25rem;\n  '], ['\n    max-width: 72.25rem;\n  ']);
 
-var _react = __webpack_require__(/*! react */ "react");
 
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
-
-var _media = __webpack_require__(/*! ../utils/media */ "./src/utils/media.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var agnosticComponent = (0, _styled.createComponent)({
+var agnosticComponent = Object(_utils_styled__WEBPACK_IMPORTED_MODULE_3__["createComponent"])({
   propsToOmit: ['wrap', 'component', 'fluid']
 });
-
-var ContainerStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
+var ContainerStyle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(agnosticComponent)(_templateObject(), function (props) {
   return props.fluid && 'width: 100%;';
 }, function (props) {
-  return !props.fluid && _media.fluid.xs(_templateObject2);
+  return !props.fluid && _utils_media__WEBPACK_IMPORTED_MODULE_4__["fluid"].xs(_templateObject2());
 }, function (props) {
-  return !props.fluid && _media.fluid.greaterXS(_templateObject3);
+  return !props.fluid && _utils_media__WEBPACK_IMPORTED_MODULE_4__["fluid"].greaterXS(_templateObject3());
 }, function (props) {
-  return !props.fluid && _media.fluid.greaterSM(_templateObject4);
+  return !props.fluid && _utils_media__WEBPACK_IMPORTED_MODULE_4__["fluid"].greaterSM(_templateObject4());
 }, function (props) {
-  return !props.fluid && _media.fluid.greaterMD(_templateObject5);
+  return !props.fluid && _utils_media__WEBPACK_IMPORTED_MODULE_4__["fluid"].greaterMD(_templateObject5());
 }, function (props) {
-  return !props.fluid && _media.fluid.greaterLG(_templateObject6);
+  return !props.fluid && _utils_media__WEBPACK_IMPORTED_MODULE_4__["fluid"].greaterLG(_templateObject6());
 });
 
 var Container = function Container(props) {
-  return _react2.default.createElement(
-    ContainerStyle,
-    _extends({
-      fluid: props.fluid,
-      className: props.className,
-      style: props.style,
-      component: props.component
-    }, props),
-    props.children
-  );
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ContainerStyle, _extends({
+    fluid: props.fluid,
+    className: props.className,
+    style: props.style,
+    component: props.component
+  }, props), props.children);
 };
 
 Container.propTypes = {
   /**
    * react/html elements
    */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node), prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node]),
 
   /**
    * The component to render the `Container` as.
    */
-  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
+  component: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]),
 
   /**
    * full width or controlled width layout
    */
-  fluid: _propTypes2.default.bool,
+  fluid: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
 
   /**
    * override the `className` on the root element of Row
    */
-  className: _propTypes2.default.string,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * overide the `style` on the root element of Row
    */
-  style: _propTypes2.default.object
+  style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-
 Container.defaultProps = {
   children: [],
   fluid: false,
@@ -1910,9 +2001,7 @@ Container.defaultProps = {
   style: {},
   component: 'div'
 };
-
-exports.default = Container;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["default"] = (Container);
 
 /***/ }),
 
@@ -1920,47 +2009,42 @@ module.exports = exports['default'];
 /*!********************************!*\
   !*** ./src/components/Row.jsx ***!
   \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
+/* harmony import */ var _Col__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Col */ "./src/components/Col.jsx");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ", ";\n  flex-wrap: ", ";\n  justify-content: ", ";\n  align-items: ", ";\n  align-content: ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n  ", ";\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n'], ['\n  box-sizing: border-box;\n  display: flex;\n  flex: 0 1 auto;\n  width: 100%;\n  flex-direction: ', ';\n  flex-wrap: ', ';\n  justify-content: ', ';\n  align-items: ', ';\n  align-content: ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n  ', ';\n']);
 
-var _react = __webpack_require__(/*! react */ "react");
 
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(/*! prop-types */ "prop-types");
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-var _styled = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
-
-var _Col = __webpack_require__(/*! ./Col */ "./src/components/Col.jsx");
-
-var _Col2 = _interopRequireDefault(_Col);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var agnosticComponent = (0, _styled.createComponent)({
+var agnosticComponent = Object(_utils_styled__WEBPACK_IMPORTED_MODULE_3__["createComponent"])({
   propsToOmit: ['wrap', 'direction', 'justifyContent', 'alignContent', 'alignItems', 'minColWidths', 'debug', 'height', 'padding', 'paddingTop', 'paddingLeft', 'paddingBottom', 'paddingRight', 'center', 'fill', 'component', 'gutter', 'columnDivisions']
 });
-
-var RowStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObject, function (props) {
+var RowStyle = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(agnosticComponent)(_templateObject(), function (props) {
   return props.direction;
 }, function (props) {
   return props.wrap;
@@ -1973,17 +2057,17 @@ var RowStyle = (0, _styledComponents2.default)(agnosticComponent)(_templateObjec
 }, function (props) {
   return props.debug && 'border: 1px solid red';
 }, function (props) {
-  return props.paddingTop && 'padding-top: ' + props.paddingTop;
+  return props.paddingTop && "padding-top: ".concat(props.paddingTop);
 }, function (props) {
-  return props.paddingLeft && 'padding-left: ' + props.paddingLeft;
+  return props.paddingLeft && "padding-left: ".concat(props.paddingLeft);
 }, function (props) {
-  return props.paddingBottom && 'padding-bottom: ' + props.paddingBottom;
+  return props.paddingBottom && "padding-bottom: ".concat(props.paddingBottom);
 }, function (props) {
-  return props.paddingRight && 'padding-right: ' + props.paddingRight;
+  return props.paddingRight && "padding-right: ".concat(props.paddingRight);
 }, function (props) {
-  return props.padding && 'padding: ' + props.padding;
+  return props.padding && "padding: ".concat(props.padding);
 }, function (props) {
-  return props.height && 'height: ' + props.height;
+  return props.height && "height: ".concat(props.height);
 }, function (props) {
   return props.fill && 'height: 100%';
 });
@@ -1995,11 +2079,9 @@ var Row = function Row(props) {
         debug = props.debug,
         minColWidths = props.minColWidths,
         children = props.children;
-
-
-    return _react2.default.Children.map(children, function (child) {
-      if (child && child.type === _Col2.default) {
-        return _react2.default.cloneElement(child, {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.map(children, function (child) {
+      if (child && child.type === _Col__WEBPACK_IMPORTED_MODULE_4__["default"]) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.cloneElement(child, {
           gutter: gutter,
           columnDivisions: columnDivisions,
           debug: debug,
@@ -2011,141 +2093,136 @@ var Row = function Row(props) {
     });
   };
 
-  return _react2.default.createElement(
-    RowStyle,
-    _extends({
-      wrap: props.wrap,
-      direction: props.direction,
-      justifyContent: props.justifyContent,
-      alignContent: props.alignContent,
-      alignItems: props.alignItems,
-      minColWidths: props.minColWidths,
-      className: props.className,
-      style: props.style,
-      debug: props.debug,
-      height: props.height,
-      padding: props.padding,
-      paddingTop: props.paddingTop,
-      paddingLeft: props.paddingLeft,
-      paddingBottom: props.paddingBottom,
-      paddingRight: props.paddingRight,
-      center: props.center,
-      fill: props.fill,
-      component: props.component
-    }, props),
-    renderChildren(props)
-  );
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(RowStyle, _extends({
+    wrap: props.wrap,
+    direction: props.direction,
+    justifyContent: props.justifyContent,
+    alignContent: props.alignContent,
+    alignItems: props.alignItems,
+    minColWidths: props.minColWidths,
+    className: props.className,
+    style: props.style,
+    debug: props.debug,
+    height: props.height,
+    padding: props.padding,
+    paddingTop: props.paddingTop,
+    paddingLeft: props.paddingLeft,
+    paddingBottom: props.paddingBottom,
+    paddingRight: props.paddingRight,
+    center: props.center,
+    fill: props.fill,
+    component: props.component
+  }, props), renderChildren(props));
 };
 
 Row.propTypes = {
   /**
    * children
    */
-  children: _propTypes2.default.oneOfType([_propTypes2.default.arrayOf(_propTypes2.default.node), _propTypes2.default.node]),
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node), prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node]),
 
   /**
    * sets the margins for flex items
    */
-  gutter: _propTypes2.default.number,
+  gutter: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
 
   /**
    * controls the size of each flex division. 1/12 divisions yeilds ~8% section of screen size.
    * 1/24 would yield ~4%
    */
-  columnDivisions: _propTypes2.default.number,
+  columnDivisions: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
 
   /**
    * sets the min-width for all `Col` flex items. This also forces wrapping when the screen size is adjusted
    * and the flex item reaches its min-width
    */
-  minColWidths: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+  minColWidths: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
 
   /**
    * overide the `className` on the root element of Row
    */
-  className: _propTypes2.default.string,
+  className: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * override the `style` on the root element of Row
    */
-  style: _propTypes2.default.object,
+  style: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
 
   /**
    * set the wrapping type
    */
-  wrap: _propTypes2.default.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
+  wrap: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['nowrap', 'wrap', 'wrap-reverse']),
 
   /**
    * The component to render the `Row` as
    */
-  component: _propTypes2.default.oneOfType([_propTypes2.default.func, _propTypes2.default.string]),
+  component: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string]),
 
   /**
    * set the `Row` direction
    */
-  direction: _propTypes2.default.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
+  direction: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['row', 'row-reverse', 'column', 'column-reverse']),
 
   /**
    * jusify `Col` items on the min x axis (hotizontally)
    */
-  justifyContent: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
+  justifyContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly']),
 
   /**
    * aligns the whole structure according to its value and has no effect when items are in a single line
    */
-  alignContent: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
+  alignContent: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['flex-start', 'flex-end', 'center', 'baseline', 'stretch']),
 
   /**
    * aligns the items inside a flex container along the y axis just like justifyContent does along the x axis
    */
-  alignItems: _propTypes2.default.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch', 'baseline']),
+  alignItems: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOf(['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch', 'baseline']),
 
   /**
    * enables bounding boxes for `Row` and `Col` to help debug layout issues
    */
-  debug: _propTypes2.default.bool,
+  debug: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
 
   /**
    * set the height of the `Row`
    */
-  height: _propTypes2.default.string,
+  height: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * set the padding of the `Row`
    */
-  padding: _propTypes2.default.string,
+  padding: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * set the padding-top of the `Row`
    */
-  paddingTop: _propTypes2.default.string,
+  paddingTop: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * set the padding-left of the `Row`
    */
-  paddingLeft: _propTypes2.default.string,
+  paddingLeft: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * set the padding-bottom of the `Row`
    */
-  paddingBottom: _propTypes2.default.string,
+  paddingBottom: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * set the padding-right of the `Row`
    */
-  paddingRight: _propTypes2.default.string,
+  paddingRight: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
 
   /**
    * shortcut to center the `Col` items within a `Row`
    */
-  center: _propTypes2.default.bool,
+  center: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
 
   /**
    * shortcut to fill the `Row` to `height: 100%`
    */
-  fill: _propTypes2.default.bool
+  fill: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-
 Row.defaultProps = {
   children: [],
   gutter: 0,
@@ -2169,9 +2246,7 @@ Row.defaultProps = {
   center: false,
   fill: false
 };
-
-exports.default = Row;
-module.exports = exports['default'];
+/* harmony default export */ __webpack_exports__["default"] = (Row);
 
 /***/ }),
 
@@ -2179,34 +2254,24 @@ module.exports = exports['default'];
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: Container, Row, Col */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Container */ "./src/components/Container.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return _components_Container__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _components_Row__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Row */ "./src/components/Row.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Row", function() { return _components_Row__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _components_Col__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Col */ "./src/components/Col.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Col", function() { return _components_Col__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Col = exports.Row = exports.Container = undefined;
 
-var _Container = __webpack_require__(/*! ./components/Container */ "./src/components/Container.jsx");
 
-var _Container2 = _interopRequireDefault(_Container);
 
-var _Row = __webpack_require__(/*! ./components/Row */ "./src/components/Row.jsx");
-
-var _Row2 = _interopRequireDefault(_Row);
-
-var _Col = __webpack_require__(/*! ./components/Col */ "./src/components/Col.jsx");
-
-var _Col2 = _interopRequireDefault(_Col);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Container = _Container2.default;
-exports.Row = _Row2.default;
-exports.Col = _Col2.default;
 
 /***/ }),
 
@@ -2214,69 +2279,155 @@ exports.Col = _Col2.default;
 /*!****************************!*\
   !*** ./src/utils/media.js ***!
   \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: media, fluid, genWidth */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "media", function() { return media; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fluid", function() { return fluid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "genWidth", function() { return genWidth; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 75em) {\n    ", "\n    }\n    "]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 62em) {\n    ", "\n    }\n    "]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 48em) {\n    ", "\n    }\n    "]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 34em) {\n    ", "\n    }\n    "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n    ", "\n    "]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n    @media only screen and (min-width: 1280px) {\n    ", "\n    }\n    "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ", "\n    }\n    "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 600px) and (max-width: 959px) {\n    ", "\n    }\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    @media (min-width: 0) and (max-width: 599px) {\n    ", "\n    }\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    ", "\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.genWidth = exports.fluid = exports.media = undefined;
-
-var _templateObject = _taggedTemplateLiteral(['\n    ', '\n    '], ['\n    ', '\n    ']),
-    _templateObject2 = _taggedTemplateLiteral(['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 0) and (max-width: 599px) {\n    ', '\n    }\n    ']),
-    _templateObject3 = _taggedTemplateLiteral(['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 600px) and (max-width: 959px) {\n    ', '\n    }\n    ']),
-    _templateObject4 = _taggedTemplateLiteral(['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 960px) and (max-width: 1280px) {\n    ', '\n    }\n    ']),
-    _templateObject5 = _taggedTemplateLiteral(['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    '], ['\n    @media only screen and (min-width: 1280px) {\n    ', '\n    }\n    ']),
-    _templateObject6 = _taggedTemplateLiteral(['\n    @media (min-width: 34em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 34em) {\n    ', '\n    }\n    ']),
-    _templateObject7 = _taggedTemplateLiteral(['\n    @media (min-width: 48em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 48em) {\n    ', '\n    }\n    ']),
-    _templateObject8 = _taggedTemplateLiteral(['\n    @media (min-width: 62em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 62em) {\n    ', '\n    }\n    ']),
-    _templateObject9 = _taggedTemplateLiteral(['\n    @media (min-width: 75em) {\n    ', '\n    }\n    '], ['\n    @media (min-width: 75em) {\n    ', '\n    }\n    ']);
-
-var _styledComponents = __webpack_require__(/*! styled-components */ "styled-components");
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var media = exports.media = {
+var media = {
   flex: function flex() {
-    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   xs: function xs() {
-    return (0, _styledComponents.css)(_templateObject2, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject2(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   sm: function sm() {
-    return (0, _styledComponents.css)(_templateObject3, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject3(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   md: function md() {
-    return (0, _styledComponents.css)(_templateObject4, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject4(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   lg: function lg() {
-    return (0, _styledComponents.css)(_templateObject5, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject5(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   }
 };
-
-var fluid = exports.fluid = {
+var fluid = {
   xs: function xs() {
-    return (0, _styledComponents.css)(_templateObject, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject6(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   greaterXS: function greaterXS() {
-    return (0, _styledComponents.css)(_templateObject6, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject7(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   greaterSM: function greaterSM() {
-    return (0, _styledComponents.css)(_templateObject7, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject8(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   greaterMD: function greaterMD() {
-    return (0, _styledComponents.css)(_templateObject8, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject9(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   },
   greaterLG: function greaterLG() {
-    return (0, _styledComponents.css)(_templateObject9, _styledComponents.css.apply(undefined, arguments));
+    return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject10(), styled_components__WEBPACK_IMPORTED_MODULE_0__["css"].apply(void 0, arguments));
   }
 };
-
-var genWidth = exports.genWidth = function genWidth(prop, divisions, gutter) {
-  return 'calc(' + prop / divisions * 100 + '% - ' + gutter * 2 + 'px)';
+var genWidth = function genWidth(prop, divisions, gutter) {
+  return "calc(".concat(prop / divisions * 100, "% - ").concat(gutter * 2, "px)");
 };
 
 /***/ }),
@@ -2285,54 +2436,45 @@ var genWidth = exports.genWidth = function genWidth(prop, divisions, gutter) {
 /*!*****************************!*\
   !*** ./src/utils/styled.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: createComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createComponent", function() { return createComponent; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash.omit */ "./node_modules/lodash.omit/index.js");
+/* harmony import */ var lodash_omit__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_omit__WEBPACK_IMPORTED_MODULE_1__);
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createComponent = undefined;
-
-var _react = __webpack_require__(/*! react */ "react");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _lodash = __webpack_require__(/*! lodash.omit */ "./node_modules/lodash.omit/index.js");
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 /**
  * createComponent
  * @param {String} component
  * @param {Array} propsToOmit
  */
+
 var createComponent = function createComponent() {
   var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
       _ref$component = _ref.component,
-      component = _ref$component === undefined ? 'div' : _ref$component,
+      component = _ref$component === void 0 ? 'div' : _ref$component,
       _ref$propsToOmit = _ref.propsToOmit,
-      propsToOmit = _ref$propsToOmit === undefined ? [] : _ref$propsToOmit;
+      propsToOmit = _ref$propsToOmit === void 0 ? [] : _ref$propsToOmit;
 
-  return function (
-  // eslint-disable-next-line react/prop-types
+  return function ( // eslint-disable-next-line react/prop-types
   _ref2) {
     var children = _ref2.children,
-        otherProps = _objectWithoutProperties(_ref2, ['children']);
+        otherProps = _objectWithoutProperties(_ref2, ["children"]);
 
-    var props = (0, _lodash2.default)(otherProps, propsToOmit);
+    var props = lodash_omit__WEBPACK_IMPORTED_MODULE_1___default()(otherProps, propsToOmit);
     var tag = otherProps.component || component;
-
-    return _react2.default.createElement(tag, props, children);
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(tag, props, children);
   };
 };
-exports.createComponent = createComponent;
 
 /***/ }),
 

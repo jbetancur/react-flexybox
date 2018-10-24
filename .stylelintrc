@@ -1,0 +1,16 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "indentation": 2,
+    "string-quotes": "single",
+    "color-hex-case": "upper",
+    "declaration-colon-newline-after": null,
+    "value-list-max-empty-lines": null,
+    "font-family-no-missing-generic-family-keyword": null,
+  },
+  "syntax": "scss"
+}
