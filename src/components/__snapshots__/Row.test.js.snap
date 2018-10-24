@@ -52,7 +52,7 @@ exports[`Row it mounts <Row /> 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -101,7 +101,7 @@ exports[`Row it mounts <Row /> 1`] = `
         style={Object {}}
       />
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;
 
@@ -157,7 +157,7 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -206,7 +206,7 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
         style={Object {}}
       />
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;
 
@@ -276,7 +276,7 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -341,7 +341,7 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
           style={Object {}}
           xs={false}
         >
-          <Styled(Component)
+          <Col__ColStyle
             alignSelf="auto"
             className=""
             columnDivisions={12}
@@ -378,11 +378,11 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
                 style={Object {}}
               />
             </Component>
-          </Styled(Component)>
+          </Col__ColStyle>
         </Col>
       </div>
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;
 
@@ -600,7 +600,7 @@ exports[`Row it overrides the default component as a component 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -651,7 +651,7 @@ exports[`Row it overrides the default component as a component 1`] = `
         <div />
       </Faux>
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;
 
@@ -707,7 +707,7 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -760,7 +760,7 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
         />
       </div>
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;
 
@@ -828,7 +828,7 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
   style={Object {}}
   wrap="wrap"
 >
-  <Styled(Component)
+  <Row__RowStyle
     alignContent="stretch"
     alignItems="stretch"
     center={false}
@@ -893,7 +893,7 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
           style={Object {}}
           xs={false}
         >
-          <Styled(Component)
+          <Col__ColStyle
             alignSelf="auto"
             className=""
             columnDivisions={12}
@@ -930,10 +930,10 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
                 style={Object {}}
               />
             </Component>
-          </Styled(Component)>
+          </Col__ColStyle>
         </Col>
       </div>
     </Component>
-  </Styled(Component)>
+  </Row__RowStyle>
 </Row>
 `;

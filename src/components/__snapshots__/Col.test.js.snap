@@ -29,7 +29,7 @@ exports[`Col it mounts <Col /> 1`] = `
   style={Object {}}
   xs={false}
 >
-  <Styled(Component)
+  <Col__ColStyle
     alignSelf="auto"
     className=""
     columnDivisions={12}
@@ -66,7 +66,7 @@ exports[`Col it mounts <Col /> 1`] = `
         style={Object {}}
       />
     </Component>
-  </Styled(Component)>
+  </Col__ColStyle>
 </Col>
 `;
 
@@ -99,7 +99,7 @@ exports[`Col it mounts <Col component="span" /> 1`] = `
   style={Object {}}
   xs={false}
 >
-  <Styled(Component)
+  <Col__ColStyle
     alignSelf="auto"
     className=""
     columnDivisions={12}
@@ -136,7 +136,7 @@ exports[`Col it mounts <Col component="span" /> 1`] = `
         style={Object {}}
       />
     </Component>
-  </Styled(Component)>
+  </Col__ColStyle>
 </Col>
 `;
 
@@ -255,7 +255,7 @@ exports[`Col it overrides the default component as a component 1`] = `
   style={Object {}}
   xs={false}
 >
-  <Styled(Component)
+  <Col__ColStyle
     alignSelf="auto"
     className=""
     columnDivisions={12}
@@ -294,7 +294,7 @@ exports[`Col it overrides the default component as a component 1`] = `
         <div />
       </Faux>
     </Component>
-  </Styled(Component)>
+  </Col__ColStyle>
 </Col>
 `;
 
@@ -327,7 +327,7 @@ exports[`Col it renders children 1`] = `
   style={Object {}}
   xs={false}
 >
-  <Styled(Component)
+  <Col__ColStyle
     alignSelf="auto"
     className=""
     columnDivisions={12}
@@ -366,7 +366,7 @@ exports[`Col it renders children 1`] = `
         <section />
       </div>
     </Component>
-  </Styled(Component)>
+  </Col__ColStyle>
 </Col>
 `;
 
