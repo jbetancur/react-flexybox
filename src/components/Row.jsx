@@ -48,10 +48,32 @@ const RowStyle = styled(agnosticComponent)`
 `;
 
 const Row = (props) => {
-  const renderChildren = () => {
-    const { gutter, columnDivisions, debug, minColWidths, children } = props;
-
-    return React.Children.map(children, (child) => {
+  const {
+    gutter,
+    columnDivisions,
+    debug,
+    minColWidths,
+    wrap,
+    direction,
+    justifyContent,
+    alignContent,
+    alignItems,
+    className,
+    style,
+    height,
+    padding,
+    paddingTop,
+    paddingLeft,
+    paddingBottom,
+    paddingRight,
+    center,
+    fill,
+    component,
+    children,
+    ...rest
+  } = props;
+  const renderChildren = () => (
+    React.Children.map(children, (child) => {
       if (child && child.type === Col) {
         return React.cloneElement(child, {
           gutter,
@@ -62,30 +84,30 @@ const Row = (props) => {
       }
 
       return child;
-    });
-  };
+    })
+  );
 
   return (
     <RowStyle
-      wrap={props.wrap}
-      direction={props.direction}
-      justifyContent={props.justifyContent}
-      alignContent={props.alignContent}
-      alignItems={props.alignItems}
-      minColWidths={props.minColWidths}
-      className={props.className}
-      style={props.style}
-      debug={props.debug}
-      height={props.height}
-      padding={props.padding}
-      paddingTop={props.paddingTop}
-      paddingLeft={props.paddingLeft}
-      paddingBottom={props.paddingBottom}
-      paddingRight={props.paddingRight}
-      center={props.center}
-      fill={props.fill}
-      component={props.component}
-      {...props}
+      wrap={wrap}
+      direction={direction}
+      justifyContent={justifyContent}
+      alignContent={alignContent}
+      alignItems={alignItems}
+      minColWidths={minColWidths}
+      className={className}
+      style={style}
+      debug={debug}
+      height={height}
+      padding={padding}
+      paddingTop={paddingTop}
+      paddingLeft={paddingLeft}
+      paddingBottom={paddingBottom}
+      paddingRight={paddingRight}
+      center={center}
+      fill={fill}
+      component={component}
+      {...rest}
     >
       {renderChildren(props)}
     </RowStyle>

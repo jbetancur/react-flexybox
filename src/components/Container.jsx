@@ -2,52 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { createComponent } from '../utils/styled';
-import { fluid } from '../utils/media';
+import { fluid as fluidMedia } from '../utils/media';
 
 const agnosticComponent = createComponent({
   propsToOmit: [
     'wrap',
     'component',
     'fluid',
-  ]
+  ],
 });
 
 const ContainerStyle = styled(agnosticComponent)`
   margin-right: auto;
   margin-left: auto;
   ${props => props.fluid && 'width: 100%;'};
-
-  ${props => !props.fluid && fluid.xs`
+  ${props => !props.fluid && fluidMedia.xs`
     width: 100%;
-  `}
-
-  ${props => !props.fluid && fluid.greaterXS`
+  `};
+  ${props => !props.fluid && fluidMedia.greaterXS`
     max-width: 34rem;
-  `}
-
-  ${props => !props.fluid && fluid.greaterSM`
+  `};
+  ${props => !props.fluid && fluidMedia.greaterSM`
     max-width: 45rem;
-  `}
-
-  ${props => !props.fluid && fluid.greaterMD`
+  `};
+  ${props => !props.fluid && fluidMedia.greaterMD`
     max-width: 60rem;
-  `}
-
-  ${props => !props.fluid && fluid.greaterLG`
+  `};
+  ${props => !props.fluid && fluidMedia.greaterLG`
     max-width: 72.25rem;
-  `}
-};
+  `};
 `;
 
-const Container = props => (
+const Container = ({
+  fluid,
+  className,
+  style,
+  component,
+  children,
+  ...rest,
+}) => (
   <ContainerStyle
-    fluid={props.fluid}
-    className={props.className}
-    style={props.style}
-    component={props.component}
-    {...props}
+    fluid={fluid}
+    className={className}
+    style={style}
+    component={component}
+    {...rest}
   >
-    {props.children}
+    {children}
   </ContainerStyle>
 );
 
