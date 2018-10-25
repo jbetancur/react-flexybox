@@ -28,7 +28,6 @@ const ColStyle = styled(agnosticComponent)`
   order: ${props => props.order};
   align-self: ${props => props.alignSelf};
   ${props => props.debug && 'border: 1px solid green'};
-
   ${props => props.flex && media.flex`
     --width: ${genWidth(props.flex, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
@@ -37,54 +36,67 @@ const ColStyle = styled(agnosticComponent)`
 
   /* if flex is just true then set flex to auto */
   ${props => !Number.isInteger(props.flex) && props.flex && 'flex: 1'};
-
   ${props => Number.isInteger(props.xs) && media.xs`
     --width: ${genWidth(props.xs, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
     min-width: var(--width);
-  `}
-
+  `};
   ${props => Number.isInteger(props.sm) && media.sm`
     --width: ${genWidth(props.sm, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
     min-width: var(--width);
-  `}
-
+  `};
   ${props => Number.isInteger(props.md) && media.md`
     --width: ${genWidth(props.md, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
     min-width: var(--width);
-  `}
-
+  `};
   ${props => Number.isInteger(props.lg) && media.lg`
     --width: ${genWidth(props.lg, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
     min-width: var(--width);
-  `}
+  `};
 
   /* Allows min-width to be overridden */
   ${props => props.minWidth && `min-width: ${props.minWidth}px`};
 `;
 
-const Col = props => (
+const Col = ({
+  alignSelf,
+  flex,
+  xs,
+  sm,
+  md,
+  lg,
+  gutter,
+  columnDivisions,
+  order,
+  className,
+  style,
+  minWidth,
+  debug,
+  component,
+  children,
+  ...rest,
+}) => (
   <ColStyle
-    alignSelf={props.alignSelf}
-    flex={props.flex}
-    xs={props.xs}
-    sm={props.sm}
-    md={props.md}
-    lg={props.lg}
-    gutter={props.gutter}
-    columnDivisions={props.columnDivisions}
-    order={props.order}
-    className={props.className}
-    style={props.style}
-    minWidth={props.minWidth}
-    debug={props.debug}
-    component={props.component}
-    {...props}
+    alignSelf={alignSelf}
+    flex={flex}
+    xs={xs}
+    sm={sm}
+    md={md}
+    lg={lg}
+    gutter={gutter}
+    columnDivisions={columnDivisions}
+    order={order}
+    className={className}
+    style={style}
+    minWidth={minWidth}
+    debug={debug}
+    component={component}
+    {...rest}
   >
-    {props.children}
+    {children}
   </ColStyle>
 );
 
@@ -106,12 +118,12 @@ Col.propTypes = {
   /**
    * inherited from `Row`
    */
-  gutter: PropTypes.number.isRequired,
+  gutter: PropTypes.number,
 
   /**
    * inherited from `Row`
    */
-  columnDivisions: PropTypes.number.isRequired,
+  columnDivisions: PropTypes.number,
 
   /**
    * The component to render the `Col` as

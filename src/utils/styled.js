@@ -8,7 +8,8 @@ import omit from 'lodash.omit';
  */
 export const createComponent = ({ component = 'div', propsToOmit = [] } = {}) => (
   // eslint-disable-next-line react/prop-types
-  { children, ...otherProps }) => {
+  { children, ...otherProps }
+) => {
   const props = omit(otherProps, propsToOmit);
   const tag = otherProps.component || component;
 
