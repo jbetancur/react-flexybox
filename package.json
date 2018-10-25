@@ -3,6 +3,10 @@
   "version": "2.1.0",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.min.js",
+  "module": "dist/react-flexybox.min.js",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=8.11.3"
   },
