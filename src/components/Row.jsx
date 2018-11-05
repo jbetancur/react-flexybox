@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { createComponent } from '../utils/styled';
-import Col from './Col';
 
 const agnosticComponent = createComponent({
   propsToOmit: [
@@ -72,9 +71,10 @@ const Row = (props) => {
     children,
     ...rest
   } = props;
+
   const renderChildren = () => (
     React.Children.map(children, (child) => {
-      if (child && child.type === Col) {
+      if (child && child.type.displayName === 'Col') {
         return React.cloneElement(child, {
           gutter,
           columnDivisions,
@@ -249,5 +249,7 @@ Row.defaultProps = {
   center: false,
   fill: false,
 };
+
+Row.displayName = 'Row';
 
 export default Row;

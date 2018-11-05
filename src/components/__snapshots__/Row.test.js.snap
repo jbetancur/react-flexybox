@@ -203,19 +203,6 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
 `;
 
 exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
-.c1 {
-  box-sizing: border-box;
-  margin: 0px;
-  max-height: 100%;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-  border: 1px solid green;
-}
-
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -244,6 +231,19 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
   -ms-flex-line-pack: stretch;
   align-content: stretch;
   border: 1px solid red;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  border: 1px solid green;
 }
 
 <Row
@@ -745,18 +745,6 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
 `;
 
 exports[`Row it passes props down to a child that is a <Col /> 1`] = `
-.c1 {
-  box-sizing: border-box;
-  margin: 0px;
-  max-height: 100%;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-}
-
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -784,6 +772,18 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+}
+
+.c1 {
+  box-sizing: border-box;
+  margin: 0px;
+  max-height: 100%;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
 
 <Row
