@@ -90,4 +90,6 @@ Container.defaultProps = {
   component: 'div',
 };
 
+Container.displayName = 'Container';
+
 export default Container;

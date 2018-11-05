@@ -199,4 +199,6 @@ Col.defaultProps = {
   debug: false,
 };
 
+Col.displayName = 'Col';
+
 export default Col;
