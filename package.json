@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.js",
   "module": "dist/react-flexybox.js",
