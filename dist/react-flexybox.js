@@ -1873,6 +1873,7 @@ Col.defaultProps = {
   columnDivisions: 12,
   debug: false
 };
+Col.displayName = 'Col';
 /* harmony default export */ __webpack_exports__["default"] = (Col);
 
 /***/ }),
@@ -2033,6 +2034,7 @@ Container.defaultProps = {
   style: {},
   component: 'div'
 };
+Container.displayName = 'Container';
 /* harmony default export */ __webpack_exports__["default"] = (Container);
 
 /***/ }),
@@ -2053,7 +2055,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _utils_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/styled */ "./src/utils/styled.js");
-/* harmony import */ var _Col__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Col */ "./src/components/Col.jsx");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -2071,7 +2072,6 @@ function _templateObject() {
 }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 
 
 
@@ -2134,7 +2134,7 @@ var Row = function Row(props) {
 
   var renderChildren = function renderChildren() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.Children.map(children, function (child) {
-      if (child && child.type === _Col__WEBPACK_IMPORTED_MODULE_4__["default"]) {
+      if (child && child.type.displayName === 'Col') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.cloneElement(child, {
           gutter: gutter,
           columnDivisions: columnDivisions,
@@ -2300,6 +2300,7 @@ Row.defaultProps = {
   center: false,
   fill: false
 };
+Row.displayName = 'Row';
 /* harmony default export */ __webpack_exports__["default"] = (Row);
 
 /***/ }),
