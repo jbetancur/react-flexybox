@@ -1,5 +1,4 @@
 import { uglify } from 'rollup-plugin-uglify';
-import pkg from '../package.json';
 
 import config, { plugins } from './rollup.config.common';
 
@@ -7,8 +6,12 @@ export default Object.assign(config, {
   output: [
     {
       name: 'ReactFlexybox',
-      file: pkg.browser,
+      file: 'dist/react-flexybox.umd.js',
       format: 'umd',
+      globals: {
+        react: 'React',
+        'styled-components': 'styled',
+      },
     },
   ],
   plugins: plugins.concat([

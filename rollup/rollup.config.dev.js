@@ -5,7 +5,7 @@ export default Object.assign(config, {
   output: {
     name: 'ReactFlexybox',
     file: `dist/${pkg.name}.dev.js`,
-    format: 'umd',
+    format: 'cjs',
   },
   plugins: plugins.concat([
     // add additional plugins here
