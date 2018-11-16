@@ -16,8 +16,7 @@ describe('Container', () => {
       fluid
       className="rick-morty"
       style={{ color: 'purple' }}
-    />
-    ).toJSON();
+    />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
