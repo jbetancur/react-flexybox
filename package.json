@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "2.3.1",
+  "version": "2.4.0",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.cjs.js",
   "module": "dist/react-flexybox.es.js",
@@ -12,6 +12,7 @@
     "node": ">=8.11.3"
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build:dev": "rollup -c rollup/rollup.config.dev.js -m",
     "build:umd": "rollup -c rollup/rollup.config.umd.js",
     "build:cjs": "rollup -c rollup/rollup.config.cjs.js",
