@@ -16,7 +16,7 @@
     "dev": "webpack --progress --colors --watch --env dev --mode development",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "build:demo": "cd demo && yarn install && node ./scripts/build.js"
+    "build:demo": "yarn build && cd demo && yarn install && node ./scripts/build.js"
   },
   "repository": {
     "type": "git",
