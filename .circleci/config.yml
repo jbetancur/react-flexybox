@@ -22,7 +22,7 @@ jobs:
           command: npm test
       - run:
           name: build
-          command: npm run build-all
+          command: npm run build
       # - run: # run coverage report
       #     name: code-coverage
       #     command: './node_modules/.bin/nyc report --reporter=text-lcov'

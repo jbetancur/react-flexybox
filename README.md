@@ -5,9 +5,8 @@ React flexy box is a simple to use flexbox system for your React project based o
 If you've used the bootstrap layout system, then react-flexybox should be relatively familiar.
 
 * Straight forward and familiar API for controlling your layout
-* lightweight when minimized ~19.1kb (if you already use styled-components)
 * built with [styled-components](https://github.com/styled-components/styled-components) - no css/scss means no need to add special loaders/config
-* based off actual uses cases used in production apps
+* based off actual uses cases in production apps
 
 ## Live Demo
 https://react-flexybox-demo.netlify.com/
@@ -25,7 +24,7 @@ https://react-flexybox-demo.netlify.com/
 
 ## Installation
 
-dependencies: react 15+, styled-components 2+
+dependencies: react 15+, styled-components 3+
 
 ```
 npm install react-flexybox styled-components
