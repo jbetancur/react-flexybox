@@ -13,61 +13,9 @@ exports[`Col it mounts <Col /> 1`] = `
   align-self: auto;
 }
 
-<Col
-  alignSelf="auto"
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={false}
-  flex={false}
-  gutter={0}
-  lg={false}
-  md={false}
-  minWidth={false}
-  order={0}
-  sm={false}
-  style={Object {}}
-  xs={false}
->
-  <Col__ColStyle
-    alignSelf="auto"
-    className=""
-    columnDivisions={12}
-    component="div"
-    debug={false}
-    flex={false}
-    gutter={0}
-    lg={false}
-    md={false}
-    minWidth={false}
-    order={0}
-    sm={false}
-    style={Object {}}
-    xs={false}
-  >
-    <AgnosticComponent
-      alignSelf="auto"
-      className="c0"
-      columnDivisions={12}
-      component="div"
-      debug={false}
-      flex={false}
-      gutter={0}
-      lg={false}
-      md={false}
-      minWidth={false}
-      order={0}
-      sm={false}
-      style={Object {}}
-      xs={false}
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Col__ColStyle>
-</Col>
+<div
+  class="c0"
+/>
 `;
 
 exports[`Col it mounts <Col component="span" /> 1`] = `
@@ -83,61 +31,9 @@ exports[`Col it mounts <Col component="span" /> 1`] = `
   align-self: auto;
 }
 
-<Col
-  alignSelf="auto"
-  className=""
-  columnDivisions={12}
-  component="span"
-  debug={false}
-  flex={false}
-  gutter={0}
-  lg={false}
-  md={false}
-  minWidth={false}
-  order={0}
-  sm={false}
-  style={Object {}}
-  xs={false}
->
-  <Col__ColStyle
-    alignSelf="auto"
-    className=""
-    columnDivisions={12}
-    component="span"
-    debug={false}
-    flex={false}
-    gutter={0}
-    lg={false}
-    md={false}
-    minWidth={false}
-    order={0}
-    sm={false}
-    style={Object {}}
-    xs={false}
-  >
-    <AgnosticComponent
-      alignSelf="auto"
-      className="c0"
-      columnDivisions={12}
-      component="span"
-      debug={false}
-      flex={false}
-      gutter={0}
-      lg={false}
-      md={false}
-      minWidth={false}
-      order={0}
-      sm={false}
-      style={Object {}}
-      xs={false}
-    >
-      <span
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Col__ColStyle>
-</Col>
+<span
+  class="c0"
+/>
 `;
 
 exports[`Col it mounts Col with flex: auto 1`] = `
@@ -162,8 +58,7 @@ exports[`Col it mounts Col with flex: auto 1`] = `
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
@@ -196,8 +91,7 @@ exports[`Col it overrides Col flex when xs 1`] = `
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
@@ -221,82 +115,11 @@ exports[`Col it overrides default Col minWidth with minWidth prop 1`] = `
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
-exports[`Col it overrides the default component as a component 1`] = `
-.c0 {
-  box-sizing: border-box;
-  margin: 0px;
-  max-height: 100%;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-}
-
-<Col
-  alignSelf="auto"
-  className=""
-  columnDivisions={12}
-  component={[Function]}
-  debug={false}
-  flex={false}
-  gutter={0}
-  lg={false}
-  md={false}
-  minWidth={false}
-  order={0}
-  sm={false}
-  style={Object {}}
-  xs={false}
->
-  <Col__ColStyle
-    alignSelf="auto"
-    className=""
-    columnDivisions={12}
-    component={[Function]}
-    debug={false}
-    flex={false}
-    gutter={0}
-    lg={false}
-    md={false}
-    minWidth={false}
-    order={0}
-    sm={false}
-    style={Object {}}
-    xs={false}
-  >
-    <AgnosticComponent
-      alignSelf="auto"
-      className="c0"
-      columnDivisions={12}
-      component={[Function]}
-      debug={false}
-      flex={false}
-      gutter={0}
-      lg={false}
-      md={false}
-      minWidth={false}
-      order={0}
-      sm={false}
-      style={Object {}}
-      xs={false}
-    >
-      <Faux
-        className="c0"
-        style={Object {}}
-      >
-        <div />
-      </Faux>
-    </AgnosticComponent>
-  </Col__ColStyle>
-</Col>
-`;
+exports[`Col it overrides the default component as a component 1`] = `<div />`;
 
 exports[`Col it renders children 1`] = `
 .c0 {
@@ -311,63 +134,13 @@ exports[`Col it renders children 1`] = `
   align-self: auto;
 }
 
-<Col
-  alignSelf="auto"
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={false}
-  flex={false}
-  gutter={0}
-  lg={false}
-  md={false}
-  minWidth={false}
-  order={0}
-  sm={false}
-  style={Object {}}
-  xs={false}
+<div
+  class="c0"
 >
-  <Col__ColStyle
-    alignSelf="auto"
-    className=""
-    columnDivisions={12}
-    component="div"
-    debug={false}
-    flex={false}
-    gutter={0}
-    lg={false}
-    md={false}
-    minWidth={false}
-    order={0}
-    sm={false}
-    style={Object {}}
-    xs={false}
-  >
-    <AgnosticComponent
-      alignSelf="auto"
-      className="c0"
-      columnDivisions={12}
-      component="div"
-      debug={false}
-      flex={false}
-      gutter={0}
-      lg={false}
-      md={false}
-      minWidth={false}
-      order={0}
-      sm={false}
-      style={Object {}}
-      xs={false}
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      >
-        <section />
-      </div>
-    </AgnosticComponent>
-  </Col__ColStyle>
-</Col>
+  <section>
+    stuff
+  </section>
+</div>
 `;
 
 exports[`Col it sets size props 1`] = `
@@ -424,7 +197,6 @@ exports[`Col it sets size props 1`] = `
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;

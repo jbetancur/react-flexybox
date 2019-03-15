@@ -31,31 +31,9 @@ exports[`Container it mounts <Container /> 1`] = `
   }
 }
 
-<Container
-  className=""
-  component="div"
-  fluid={false}
-  style={Object {}}
->
-  <Container__ContainerStyle
-    className=""
-    component="div"
-    fluid={false}
-    style={Object {}}
-  >
-    <AgnosticComponent
-      className="c0"
-      component="div"
-      fluid={false}
-      style={Object {}}
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Container__ContainerStyle>
-</Container>
+<div
+  class="c0"
+/>
 `;
 
 exports[`Container it mounts <Container component="span" /> 1`] = `
@@ -89,31 +67,9 @@ exports[`Container it mounts <Container component="span" /> 1`] = `
   }
 }
 
-<Container
-  className=""
-  component="span"
-  fluid={false}
-  style={Object {}}
->
-  <Container__ContainerStyle
-    className=""
-    component="span"
-    fluid={false}
-    style={Object {}}
-  >
-    <AgnosticComponent
-      className="c0"
-      component="span"
-      fluid={false}
-      style={Object {}}
-    >
-      <span
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Container__ContainerStyle>
-</Container>
+<span
+  class="c0"
+/>
 `;
 
 exports[`Container it mounts <Container fluid /> 1`] = `
@@ -124,71 +80,9 @@ exports[`Container it mounts <Container fluid /> 1`] = `
 }
 
 <div
-  className="rick-morty c0"
-  style={
-    Object {
-      "color": "purple",
-    }
-  }
+  class="rick-morty c0"
+  style="color: purple;"
 />
 `;
 
-exports[`Container it overrides the default component as a component 1`] = `
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
-
-@media (min-width:34em) {
-  .c0 {
-    max-width: 34rem;
-  }
-}
-
-@media (min-width:48em) {
-  .c0 {
-    max-width: 45rem;
-  }
-}
-
-@media (min-width:62em) {
-  .c0 {
-    max-width: 60rem;
-  }
-}
-
-@media (min-width:75em) {
-  .c0 {
-    max-width: 72.25rem;
-  }
-}
-
-<Container
-  className=""
-  component={[Function]}
-  fluid={false}
-  style={Object {}}
->
-  <Container__ContainerStyle
-    className=""
-    component={[Function]}
-    fluid={false}
-    style={Object {}}
-  >
-    <AgnosticComponent
-      className="c0"
-      component={[Function]}
-      fluid={false}
-      style={Object {}}
-    >
-      <Faux
-        className="c0"
-        style={Object {}}
-      >
-        <div />
-      </Faux>
-    </AgnosticComponent>
-  </Container__ContainerStyle>
-</Container>
-`;
+exports[`Container it overrides the default component as a component 1`] = `<div />`;
