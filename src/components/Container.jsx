@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { createComponent } from '../utils/styled';
 import { fluid as fluidMedia } from '../utils/media';
 
-const agnosticComponent = createComponent({
-  propsToOmit: [
-    'wrap',
-    'component',
-    'fluid',
-  ],
-});
+const AgnosticComponent = ({
+  wrap,
+  component,
+  fluid,
+  ...rest
+}) => {
+  const Tag = component;
 
-const ContainerStyle = styled(agnosticComponent)`
+  return <Tag {...rest} />;
+};
+
+const ContainerStyle = styled(AgnosticComponent)`
   margin-right: auto;
   margin-left: auto;
   ${props => props.fluid && 'width: 100%;'};

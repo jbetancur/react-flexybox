@@ -72,7 +72,7 @@ exports[`Row it mounts <Row /> 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -96,7 +96,7 @@ exports[`Row it mounts <Row /> 1`] = `
         className="c0"
         style={Object {}}
       />
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;
@@ -173,7 +173,7 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -197,7 +197,7 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
         className="c0"
         style={Object {}}
       />
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;
@@ -288,7 +288,7 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -345,7 +345,7 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
             style={Object {}}
             xs={false}
           >
-            <Component
+            <AgnosticComponent
               alignSelf="auto"
               className="c1"
               columnDivisions={12}
@@ -365,11 +365,11 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
                 className="c1"
                 style={Object {}}
               />
-            </Component>
+            </AgnosticComponent>
           </Col__ColStyle>
         </Col>
       </div>
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;
@@ -608,7 +608,7 @@ exports[`Row it overrides the default component as a component 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -634,7 +634,7 @@ exports[`Row it overrides the default component as a component 1`] = `
       >
         <div />
       </Faux>
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;
@@ -711,7 +711,7 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -739,7 +739,7 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
           key=".0"
         />
       </div>
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;
@@ -828,7 +828,7 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
     style={Object {}}
     wrap="wrap"
   >
-    <Component
+    <AgnosticComponent
       alignContent="stretch"
       alignItems="stretch"
       center={false}
@@ -885,7 +885,7 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
             style={Object {}}
             xs={false}
           >
-            <Component
+            <AgnosticComponent
               alignSelf="auto"
               className="c1"
               columnDivisions={12}
@@ -905,11 +905,11 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
                 className="c1"
                 style={Object {}}
               />
-            </Component>
+            </AgnosticComponent>
           </Col__ColStyle>
         </Col>
       </div>
-    </Component>
+    </AgnosticComponent>
   </Row__RowStyle>
 </Row>
 `;

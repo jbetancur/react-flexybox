@@ -1,32 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { createComponent } from '../utils/styled';
 
-const agnosticComponent = createComponent({
-  propsToOmit: [
-    'wrap',
-    'direction',
-    'justifyContent',
-    'alignContent',
-    'alignItems',
-    'minColWidths',
-    'debug',
-    'height',
-    'padding',
-    'paddingTop',
-    'paddingLeft',
-    'paddingBottom',
-    'paddingRight',
-    'center',
-    'fill',
-    'component',
-    'gutter',
-    'columnDivisions',
-  ]
-});
+const AgnosticComponent = ({
+  wrap,
+  direction,
+  justifyContent,
+  alignContent,
+  alignItems,
+  minColWidths,
+  debug,
+  height,
+  padding,
+  paddingTop,
+  paddingLeft,
+  paddingBottom,
+  paddingRight,
+  center,
+  fill,
+  component,
+  gutter,
+  columnDivisions,
+  ...rest
+}) => {
+  const Tag = component;
 
-const RowStyle = styled(agnosticComponent)`
+  return <Tag {...rest} />;
+};
+
+const RowStyle = styled(AgnosticComponent)`
   box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
