@@ -1,27 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { createComponent } from '../utils/styled';
 import { media, genWidth } from '../utils/media';
 
-const agnosticComponent = createComponent({
-  propsToOmit: [
-    'alignSelf',
-    'flex',
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'gutter',
-    'columnDivisions',
-    'order',
-    'minWidth',
-    'debug',
-    'component',
-  ]
-});
+const AgnosticComponent = ({
+  alignSelf,
+  flex,
+  xs,
+  sm,
+  md,
+  lg,
+  gutter,
+  columnDivisions,
+  order,
+  minWidth,
+  debug,
+  component,
+  ...rest
+}) => {
+  const Tag = component;
 
-const ColStyle = styled(agnosticComponent)`
+  return <Tag {...rest} />;
+};
+
+const ColStyle = styled(AgnosticComponent)`
   box-sizing: border-box;
   margin: ${props => props.gutter}px;
   max-height: 100%;
@@ -32,7 +34,7 @@ const ColStyle = styled(agnosticComponent)`
     --width: ${genWidth(props.flex, props.columnDivisions, props.gutter)};
     flex: 0 1 var(--width);
     min-width: var(--width);
-  `}
+  `};
 
   /* if flex is just true then set flex to auto */
   ${props => !Number.isInteger(props.flex) && props.flex && 'flex: 1'};

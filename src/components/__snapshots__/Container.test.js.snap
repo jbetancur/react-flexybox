@@ -43,7 +43,7 @@ exports[`Container it mounts <Container /> 1`] = `
     fluid={false}
     style={Object {}}
   >
-    <Component
+    <AgnosticComponent
       className="c0"
       component="div"
       fluid={false}
@@ -53,7 +53,7 @@ exports[`Container it mounts <Container /> 1`] = `
         className="c0"
         style={Object {}}
       />
-    </Component>
+    </AgnosticComponent>
   </Container__ContainerStyle>
 </Container>
 `;
@@ -101,7 +101,7 @@ exports[`Container it mounts <Container component="span" /> 1`] = `
     fluid={false}
     style={Object {}}
   >
-    <Component
+    <AgnosticComponent
       className="c0"
       component="span"
       fluid={false}
@@ -111,7 +111,7 @@ exports[`Container it mounts <Container component="span" /> 1`] = `
         className="c0"
         style={Object {}}
       />
-    </Component>
+    </AgnosticComponent>
   </Container__ContainerStyle>
 </Container>
 `;
@@ -176,7 +176,7 @@ exports[`Container it overrides the default component as a component 1`] = `
     fluid={false}
     style={Object {}}
   >
-    <Component
+    <AgnosticComponent
       className="c0"
       component={[Function]}
       fluid={false}
@@ -188,7 +188,7 @@ exports[`Container it overrides the default component as a component 1`] = `
       >
         <div />
       </Faux>
-    </Component>
+    </AgnosticComponent>
   </Container__ContainerStyle>
 </Container>
 `;

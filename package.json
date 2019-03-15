@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.cjs.js",
   "module": "dist/react-flexybox.es.js",
@@ -80,9 +80,9 @@
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.2",
     "prop-types": "^15.6.2",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-test-renderer": "^16.6.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-test-renderer": "^16.8.3",
     "rimraf": "^2.6.2",
     "rollup": "^0.67.1",
     "rollup-plugin-babel": "^4.0.3",
@@ -91,14 +91,12 @@
     "rollup-plugin-terser": "^3.0.0",
     "rollup-plugin-uglify": "^6.0.0",
     "styled-components": "^3.4.10",
-    "stylelint": "^9.8.0",
+    "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.5.0"
+    "stylelint-processor-styled-components": "^1.5.2"
   },
-  "dependencies": {
-    "lodash.omit": "^4.5.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^15.5.0 || ^16.0.0",
     "styled-components": "^3.0.0 || ^4.0.0"
