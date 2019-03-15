@@ -30,75 +30,9 @@ exports[`Row it mounts <Row /> 1`] = `
   align-content: stretch;
 }
 
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={false}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
->
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component="div"
-    debug={false}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component="div"
-      debug={false}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
+<div
+  class="c0"
+/>
 `;
 
 exports[`Row it mounts <Row component="span" /> 1`] = `
@@ -131,75 +65,9 @@ exports[`Row it mounts <Row component="span" /> 1`] = `
   align-content: stretch;
 }
 
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component="span"
-  debug={false}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
->
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component="span"
-    debug={false}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component="span"
-      debug={false}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <span
-        className="c0"
-        style={Object {}}
-      />
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
+<span
+  class="c0"
+/>
 `;
 
 exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
@@ -246,132 +114,13 @@ exports[`Row it mounts Row and passes with debug prop to Col 1`] = `
   border: 1px solid green;
 }
 
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={true}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
+<div
+  class="c0"
 >
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component="div"
-    debug={true}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component="div"
-      debug={true}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      >
-        <Col
-          alignSelf="auto"
-          className=""
-          columnDivisions={12}
-          component="div"
-          debug={true}
-          flex={false}
-          gutter={0}
-          key=".0"
-          lg={false}
-          md={false}
-          minWidth={false}
-          order={0}
-          sm={false}
-          style={Object {}}
-          xs={false}
-        >
-          <Col__ColStyle
-            alignSelf="auto"
-            className=""
-            columnDivisions={12}
-            component="div"
-            debug={true}
-            flex={false}
-            gutter={0}
-            lg={false}
-            md={false}
-            minWidth={false}
-            order={0}
-            sm={false}
-            style={Object {}}
-            xs={false}
-          >
-            <AgnosticComponent
-              alignSelf="auto"
-              className="c1"
-              columnDivisions={12}
-              component="div"
-              debug={true}
-              flex={false}
-              gutter={0}
-              lg={false}
-              md={false}
-              minWidth={false}
-              order={0}
-              sm={false}
-              style={Object {}}
-              xs={false}
-            >
-              <div
-                className="c1"
-                style={Object {}}
-              />
-            </AgnosticComponent>
-          </Col__ColStyle>
-        </Col>
-      </div>
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
+  <div
+    class="c1"
+  />
+</div>
 `;
 
 exports[`Row it mounts Row with props 1`] = `
@@ -411,12 +160,8 @@ exports[`Row it mounts Row with props 1`] = `
 }
 
 <div
-  className="rick-morty c0"
-  style={
-    Object {
-      "color": "purple",
-    }
-  }
+  class="rick-morty c0"
+  style="color: purple;"
 />
 `;
 
@@ -453,8 +198,7 @@ exports[`Row it mounts Row with shortcut prop fill and overrides height if set 1
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
@@ -494,8 +238,7 @@ exports[`Row it mounts Row with shortcut prop padding and overrides padding<dire
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
@@ -531,113 +274,11 @@ exports[`Row it mounts Row with shortcut props 1`] = `
 }
 
 <div
-  className="c0"
-  style={Object {}}
+  class="c0"
 />
 `;
 
-exports[`Row it overrides the default component as a component 1`] = `
-.c0 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: 100%;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component={[Function]}
-  debug={false}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
->
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component={[Function]}
-    debug={false}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component={[Function]}
-      debug={false}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <Faux
-        className="c0"
-        style={Object {}}
-      >
-        <div />
-      </Faux>
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
-`;
+exports[`Row it overrides the default component as a component 1`] = `<div />`;
 
 exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
 .c0 {
@@ -669,79 +310,13 @@ exports[`Row it passes props down to a child that is NOT <Col /> 1`] = `
   align-content: stretch;
 }
 
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={false}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
+<div
+  class="c0"
 >
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component="div"
-    debug={false}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component="div"
-      debug={false}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      >
-        <section
-          key=".0"
-        />
-      </div>
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
+  <section>
+    test
+  </section>
+</div>
 `;
 
 exports[`Row it passes props down to a child that is a <Col /> 1`] = `
@@ -786,130 +361,11 @@ exports[`Row it passes props down to a child that is a <Col /> 1`] = `
   align-self: auto;
 }
 
-<Row
-  alignContent="stretch"
-  alignItems="stretch"
-  center={false}
-  className=""
-  columnDivisions={12}
-  component="div"
-  debug={false}
-  direction="row"
-  fill={false}
-  gutter={0}
-  height=""
-  justifyContent="flex-start"
-  minColWidths={false}
-  padding=""
-  paddingBottom=""
-  paddingLeft=""
-  paddingRight=""
-  paddingTop=""
-  style={Object {}}
-  wrap="wrap"
+<div
+  class="c0"
 >
-  <Row__RowStyle
-    alignContent="stretch"
-    alignItems="stretch"
-    center={false}
-    className=""
-    component="div"
-    debug={false}
-    direction="row"
-    fill={false}
-    height=""
-    justifyContent="flex-start"
-    minColWidths={false}
-    padding=""
-    paddingBottom=""
-    paddingLeft=""
-    paddingRight=""
-    paddingTop=""
-    style={Object {}}
-    wrap="wrap"
-  >
-    <AgnosticComponent
-      alignContent="stretch"
-      alignItems="stretch"
-      center={false}
-      className="c0"
-      component="div"
-      debug={false}
-      direction="row"
-      fill={false}
-      height=""
-      justifyContent="flex-start"
-      minColWidths={false}
-      padding=""
-      paddingBottom=""
-      paddingLeft=""
-      paddingRight=""
-      paddingTop=""
-      style={Object {}}
-      wrap="wrap"
-    >
-      <div
-        className="c0"
-        style={Object {}}
-      >
-        <Col
-          alignSelf="auto"
-          className=""
-          columnDivisions={12}
-          component="div"
-          debug={false}
-          flex={false}
-          gutter={0}
-          key=".0"
-          lg={false}
-          md={false}
-          minWidth={false}
-          order={0}
-          sm={false}
-          style={Object {}}
-          xs={false}
-        >
-          <Col__ColStyle
-            alignSelf="auto"
-            className=""
-            columnDivisions={12}
-            component="div"
-            debug={false}
-            flex={false}
-            gutter={0}
-            lg={false}
-            md={false}
-            minWidth={false}
-            order={0}
-            sm={false}
-            style={Object {}}
-            xs={false}
-          >
-            <AgnosticComponent
-              alignSelf="auto"
-              className="c1"
-              columnDivisions={12}
-              component="div"
-              debug={false}
-              flex={false}
-              gutter={0}
-              lg={false}
-              md={false}
-              minWidth={false}
-              order={0}
-              sm={false}
-              style={Object {}}
-              xs={false}
-            >
-              <div
-                className="c1"
-                style={Object {}}
-              />
-            </AgnosticComponent>
-          </Col__ColStyle>
-        </Col>
-      </div>
-    </AgnosticComponent>
-  </Row__RowStyle>
-</Row>
+  <div
+    class="c1"
+  />
+</div>
 `;

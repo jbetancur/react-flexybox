@@ -1,69 +1,73 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from 'react-testing-library';
 import 'jest-styled-components';
-import { mount } from 'enzyme';
 import Col from './Col';
 
 describe('Col', () => {
   test('it mounts <Col />', () => {
-    const wrapper = mount(<Col />);
+    const { container } = render(<Col />);
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Col with flex: auto', () => {
-    const tree = renderer.create(<Col
-      flex
-    />).toJSON();
+    const { container } = render(<Col flex />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it overrides Col flex when xs', () => {
-    const tree = renderer.create(<Col
-      flex={6}
-      xs={12}
-    />).toJSON();
+    const { container } = render(<Col flex={6} xs={12} />);
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it sets size props', () => {
-    const tree = renderer.create(<Col
-      xs={12}
-      sm={6}
-      md={3}
-      lg={1}
-    />).toJSON();
+    const { container } = render(
+      <Col
+        xs={12}
+        sm={6}
+        md={3}
+        lg={1}
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it overrides default Col minWidth with minWidth prop', () => {
-    const tree = renderer.create(<Col
-      flex={12}
-      minWidth={42}
-    />).toJSON();
+    const { container } = render(
+      <Col
+        flex={12}
+        minWidth={42}
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts <Col component="span" />', () => {
-    const wrapper = mount(<Col component="span" />);
+    const { container } = render(
+      <Col component="span" />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it overrides the default component as a component', () => {
     const Faux = () => <div />;
-    const wrapper = mount(<Col component={Faux} />);
+    const { container } = render(
+      <Col component={Faux} />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it renders children', () => {
-    const wrapper = mount(<Col><section /></Col>);
+    const { container } = render(
+      <Col><section>stuff</section></Col>
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

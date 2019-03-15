@@ -1,36 +1,45 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from 'react-testing-library';
 import 'jest-styled-components';
-import { mount } from 'enzyme';
 import Container from './Container';
 
 describe('Container', () => {
   test('it mounts <Container />', () => {
-    const wrapper = mount(<Container />);
+    const { container } = render(<Container />);
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts <Container fluid />', () => {
-    const tree = renderer.create(<Container
-      fluid
-      className="rick-morty"
-      style={{ color: 'purple' }}
-    />).toJSON();
+    const { container } = render(
+      <Container
+        fluid
+        className="rick-morty"
+        style={{ color: 'purple' }}
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts <Container component="span" />', () => {
-    const wrapper = mount(<Container component="span" />);
+    const { container } = render(
+      <Container
+        component="span"
+      />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it overrides the default component as a component', () => {
     const Faux = () => <div />;
-    const wrapper = mount(<Container component={Faux} />);
+    const { container } = render(
+      <Container
+        component={Faux}
+      />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

@@ -1,90 +1,115 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from 'react-testing-library';
 import 'jest-styled-components';
-import { mount } from 'enzyme';
 import Row from './Row';
 import Col from './Col';
 
 describe('Row', () => {
   test('it mounts <Row />', () => {
-    const wrapper = mount(<Row />);
+    const { container } = render(<Row />);
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Row with props', () => {
-    const tree = renderer.create(<Row
-      paddingTop="1em"
-      paddingLeft="1em"
-      paddingBottom="1em"
-      paddingRight="1em"
-      padding="1em"
-      height="100px"
-      className="rick-morty"
-      style={{ color: 'purple' }}
-    />).toJSON();
+    const { container } = render(
+      <Row
+        paddingTop="1em"
+        paddingLeft="1em"
+        paddingBottom="1em"
+        paddingRight="1em"
+        padding="1em"
+        height="100px"
+        className="rick-morty"
+        style={{ color: 'purple' }}
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Row and passes with debug prop to Col', () => {
-    const wrapper = mount(<Row debug><Col /></Row>);
+    const { container } = render(
+      <Row
+        debug
+      >
+        <Col />
+      </Row>
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Row with shortcut props', () => {
-    const tree = renderer.create(<Row
-      fill
-      center
-    />).toJSON();
+    const { container } = render(
+      <Row
+        fill
+        center
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Row with shortcut prop fill and overrides height if set', () => {
-    const tree = renderer.create(<Row
-      height="10px"
-      fill
-    />).toJSON();
+    const { container } = render(
+      <Row
+        height="10px"
+        fill
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts Row with shortcut prop padding and overrides padding<direction> if set', () => {
-    const tree = renderer.create(<Row
-      paddingTop="1em"
-      paddingLeft="1em"
-      paddingBottom="1em"
-      paddingRight="1em"
-      padding="0 1px 2px 0"
-    />).toJSON();
+    const { container } = render(
+      <Row
+        paddingTop="1em"
+        paddingLeft="1em"
+        paddingBottom="1em"
+        paddingRight="1em"
+        padding="0 1px 2px 0"
+      />
+    );
 
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it mounts <Row component="span" />', () => {
-    const wrapper = mount(<Row component="span" />);
+    const { container } = render(
+      <Row component="span" />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it overrides the default component as a component', () => {
     const Faux = () => <div />;
-    const wrapper = mount(<Row component={Faux} />);
+    const { container } = render(
+      <Row component={Faux} />
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it passes props down to a child that is a <Col />', () => {
-    const wrapper = mount(<Row><Col /></Row>);
+    const { container } = render(
+      <Row>
+        <Col />
+      </Row>
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('it passes props down to a child that is NOT <Col />', () => {
-    const wrapper = mount(<Row><section /></Row>);
+    const { container } = render(
+      <Row>
+        <section>test</section>
+      </Row>
+    );
 
-    expect(wrapper).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
