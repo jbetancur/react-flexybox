@@ -21,7 +21,7 @@
     "lint:js": "eslint src/**/*.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "build:demo": "yarn build && cd demo && yarn install && node ./scripts/build.js"
+    "build:demo": "yarn build && cd demo && yarn install && yarn build"
   },
   "repository": {
     "type": "git",
@@ -60,7 +60,6 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
