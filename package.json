@@ -1,6 +1,6 @@
 {
   "name": "react-flexybox",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "React Flexbox Components",
   "main": "dist/react-flexybox.cjs.js",
   "module": "dist/react-flexybox.es.js",
@@ -95,8 +95,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^15.5.0 || ^16.0.0",
-    "styled-components": "^3.0.0 || ^4.0.0"
+    "react": "^15.5.0 || ^16.0.0 || ^17.0.0",
+    "styled-components": "^3.0.0 || ^4.0.0 || ^5.0.0"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
